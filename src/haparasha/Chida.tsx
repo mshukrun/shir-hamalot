@@ -12,6 +12,15 @@ const ChidaBox = styled(BasicBox)`
   justify-content: flex-start;
 `;
 
+const InnerBox = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 35px;
+`;
+
 const OL = styled.ol`
   ${RegularText}
   list-style-type: none;
@@ -23,12 +32,9 @@ const TextDiv = styled.div`
 `;
 
 const EmptyBox = styled.div`
-  position: absolute;
   font-weight: 800;
   font-size: 56px;
   line-height: 48px;
-  top: 80px;
-  left: 20px;
   width: 150px;
   height: 80px;
   text-align: center;
@@ -37,28 +43,31 @@ const EmptyBox = styled.div`
   padding: 8px;
 `;
 
-// const CreditDiv = styled.div`
-//   position: absolute;
-//   ${RegularText}
-//   bottom: 8px;
-//   left: 35px;
-//   text-decoration: underline;
-// `;
+const CreditDiv = styled.div`
+  position: absolute;
+  ${RegularText}
+  bottom: 8px;
+  left: 35px;
+  text-decoration: underline;
+`;
 
 const Chida = () => {
   const lines = l10n.chida.content.split("|");
   return (
     <ChidaBox dir="RTL">
       <TitleDiv>{l10n.chida.title}</TitleDiv>
-      <OL>
-        {lines.map((line) => (
-          <li key={faker.datatype.uuid()}>
-            <TextDiv>{line}</TextDiv>
-          </li>
-        ))}
-      </OL>
-      <EmptyBox>?</EmptyBox>
-      {/* <CreditDiv>{l10n.chida.credit}</CreditDiv> */}
+      <InnerBox>
+        <OL>
+          {lines.map((line) => (
+            <li key={faker.datatype.uuid()}>
+              <TextDiv>{line}</TextDiv>
+            </li>
+          ))}
+        </OL>
+        <EmptyBox>?</EmptyBox>
+      </InnerBox>
+
+      <CreditDiv>{l10n.chida.credit}</CreditDiv>
     </ChidaBox>
   );
 };
