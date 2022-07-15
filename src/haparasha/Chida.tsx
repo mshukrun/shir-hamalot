@@ -35,7 +35,7 @@ const EmptyBox = styled.div`
   font-weight: 800;
   font-size: 56px;
   line-height: 48px;
-  width: 150px;
+  width: 120px;
   height: 80px;
   text-align: center;
   border-radius: 8px;
@@ -67,7 +67,7 @@ const Chida = () => {
         <EmptyBox>?</EmptyBox>
       </InnerBox>
 
-      <CreditDiv>{l10n.chida.credit}</CreditDiv>
+      {l10n.chida.gil && <CreditDiv>{l10n.chida.credit}</CreditDiv>}
     </ChidaBox>
   );
 };

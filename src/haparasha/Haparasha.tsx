@@ -10,23 +10,24 @@ import Yahe from "./Yahe";
 import Todot from "./Todot";
 import Shmita from "./Shmita";
 import PageTitle from "./PageTitle";
-import Tifzoret from "./Tifzoret";
+import Tashbetz from "./Tashbetz";
+import Sipor from "./Sipor";
 
 const BodyContainer = styled.div`
   display: grid;
-  height: 2900px;
-  width: 1000px;
-  grid-template-rows: 220px 530px 350px 300px 100px 500px 320px 280px 220px;
+  height: 3090px;
+  width: 1100px;
+  grid-template-rows: 220px 450px 460px 380px 100px 460px 320px 260px 260px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    " Tifzoret Shmita   "
-    " Tifzoret Parasha   "
+    " Tashbetz Tashbetz   "
+    " Mahane Parasha   "
     "PageTitle  PageTitle "
-    "  Brahot Mahane   "
-    " Brahot Mahane "
-    "Chida   Yahe "
+    "  Brahot Sipor   "
+    " Brahot Shmita "
+    " Yahe Chida    "
     " Todot Todot  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -45,8 +46,9 @@ const Haparasha = () => {
       <Mahane />
       <Parasha />
       <Chida />
-      <Tifzoret />
+      <Tashbetz />
       <Shmita />
+      <Sipor />
       <Todot />
     </BodyContainer>
   );

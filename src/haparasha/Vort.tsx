@@ -9,10 +9,10 @@ const VortBox = styled(BasicBox)`
   position: relative;
 `;
 
-// const SubtitleDiv = styled.div`
-//   ${MediumText}
-//   padding: 8px 30px 0;
-// `;
+const SubtitleDiv = styled.div`
+  ${MediumText}
+  padding: 8px 30px 0;
+`;
 
 const TextDiv = styled.div`
   ${RegularPlusText}
@@ -64,6 +64,7 @@ const Vort = () => {
   return (
     <VortBox dir="RTL">
       <TitleDiv>{l10n.vort.title}</TitleDiv>
+      <SubtitleDiv>{l10n.vort.subtitle}</SubtitleDiv>
       {texts.map((text) => (
         <TextDiv key={faker.datatype.uuid()}>{text}</TextDiv>
       ))}

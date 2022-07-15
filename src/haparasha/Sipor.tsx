@@ -30,14 +30,14 @@ const HemshehDiv = styled.div`
   position: absolute;
   ${RegularText}
   font-weight: 600;
-  bottom: 5px;
+  bottom: 45px;
   left: 35px;
 `;
 
 const CreditDiv = styled.div`
   position: absolute;
   ${RegularText}
-  bottom: 160px;
+  bottom: 10px;
   left: 12px;
 `;
 
