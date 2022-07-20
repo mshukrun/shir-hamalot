@@ -40,6 +40,7 @@ const Shmita = () => {
       <TitleDiv>{l10n.shmita.title}</TitleDiv>
       <SubtitleDiv>{l10n.shmita.subtitle}</SubtitleDiv>
       <TextDiv>{l10n.shmita.text}</TextDiv>
+      <TextDiv>{l10n.shmita.note}</TextDiv>
       <CreditDiv>{l10n.shmita.credit}</CreditDiv>
     </ShmitaBox>
   );
