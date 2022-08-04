@@ -18,6 +18,7 @@ const InnerBox = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
+  padding: 0 20px;
   margin-bottom: 35px;
 `;
 

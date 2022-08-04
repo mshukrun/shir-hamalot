@@ -8,7 +8,6 @@ import Title from "./Title";
 import Vort from "./Vort";
 import Yahe from "./Yahe";
 import Todot from "./Todot";
-import Shmita from "./Shmita";
 import PageTitle from "./PageTitle";
 import Sipor from "./Sipor";
 import Magic from "./Magic";
@@ -17,17 +16,17 @@ const BodyContainer = styled.div`
   display: grid;
   height: 3090px;
   width: 1100px;
-  grid-template-rows: 220px 650px 260px 380px 100px 380px 380px 280px 260px;
+  grid-template-rows: 240px 800px 220px 250px 100px 350px 300px 300px 380px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    " Magic Parasha   "
-    " Mahane Mahane   "
+    " Mahane Yahe   "
+    " Mahane Chida   "
     "PageTitle  PageTitle "
-    "  Brahot Sipor   "
-    " Brahot Shmita "
-    " Yahe Chida    "
+    "  Brahot Parasha   "
+    " Brahot Magic "
+    " Brahot Sipor    "
     " Todot Todot  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -47,7 +46,6 @@ const Haparasha = () => {
       <Parasha />
       <Chida />
       <Magic />
-      <Shmita />
       <Sipor />
       <Todot />
     </BodyContainer>

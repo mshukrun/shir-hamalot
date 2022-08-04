@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BasicBox, RegularText } from "../Common";
+import { BasicBox, RegularText, TitleDiv } from "../Common";
 import Gniza from "./Gniza";
 import l10n from "./l10n.json";
 import Pitaron from "./Pitaron";
@@ -26,13 +26,14 @@ const TextDiv = styled.div`
 const Todot = () => {
   return (
     <TodotBox dir="RTL">
+      <TitleDiv>{l10n.todot.title}</TitleDiv>
       <OL>
         <li>
           <TextDiv>{l10n.todot.first}</TextDiv>
         </li>
-        {/* <li>
+        <li>
           <TextDiv>{l10n.todot.second}</TextDiv>
-        </li> */}
+        </li>
         <li>
           <TextDiv>{l10n.todot.third}</TextDiv>
         </li>
@@ -41,7 +42,7 @@ const Todot = () => {
         </li>
       </OL>
       <Gniza r="20px" b="20px" />
-      <Pitaron l="10px" b="10px" w="45%" />
+      <Pitaron l="10px" b="10px" w="55%" />
     </TodotBox>
   );
 };
