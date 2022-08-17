@@ -18,14 +18,14 @@ const InnerBox = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
   margin-bottom: 35px;
 `;
 
 const OL = styled.ol`
   ${RegularText}
   list-style-type: none;
-  padding: 0 20px 10px;
+  padding: 0 10px 10px 0;
 `;
 
 const TextDiv = styled.div`
@@ -36,7 +36,7 @@ const EmptyBox = styled.div`
   font-weight: 800;
   font-size: 56px;
   line-height: 48px;
-  width: 120px;
+  width: 100px;
   height: 80px;
   text-align: center;
   border-radius: 8px;
