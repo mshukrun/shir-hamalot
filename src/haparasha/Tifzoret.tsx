@@ -13,13 +13,13 @@ const OL = styled.ol`
   font-family: "David Libre", serif;
   font-size: 24px;
   line-height: 30px;
-  padding: 360px 20px 5px;
-  margin-right: 80px;
+  padding: 10px 20px;
+  margin-top: 420px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  max-height: 570px;
+  max-height: 160px;
   max-width: 600px;
 `;
 
@@ -47,8 +47,8 @@ const TableDiv = styled.div`
   td {
     border-top: 1px solid black;
     border-right: 1px solid black;
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 37px;
   }
 `;
 

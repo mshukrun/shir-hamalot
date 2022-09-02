@@ -1,12 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  BasicBox,
-  RegularPlusText,
-  RegularText,
-  SubTitleText,
-  TitleDiv,
-} from "../Common";
+import { BasicBox, RegularText, SubTitleText, TitleDiv } from "../Common";
 import Havrota from "./Havrota";
 import l10n from "./l10n.json";
 
@@ -21,15 +15,15 @@ const SubtitleDiv = styled.div`
 `;
 
 const TextDiv = styled.div`
-  ${RegularPlusText}
-  padding: 20px 20px 10px;
+  ${RegularText}
+  padding: 10px 20px 10px;
 `;
 
 const CreditDiv = styled.div`
   position: absolute;
   ${RegularText}
   bottom: 20px;
-  right: 15px;
+  right: 145px;
   text-decoration: underline;
 `;
 
@@ -38,7 +32,9 @@ const Shmita = () => {
     <ShmitaBox dir="RTL">
       <Havrota />
       <TitleDiv>{l10n.shmita.title}</TitleDiv>
-      <SubtitleDiv>{l10n.shmita.subtitle}</SubtitleDiv>
+      {l10n.shmita.subtitle && (
+        <SubtitleDiv>{l10n.shmita.subtitle}</SubtitleDiv>
+      )}
       <TextDiv>{l10n.shmita.text}</TextDiv>
       <TextDiv>{l10n.shmita.note}</TextDiv>
       <CreditDiv>{l10n.shmita.credit}</CreditDiv>
