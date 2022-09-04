@@ -23,10 +23,10 @@ const BodyContainer = styled.div`
     "Title Title"
     "Vort Vort  "
     " Shmita Mahane   "
-    " Parasha Yahe    "
+    " Chida  Yahe    "
     "PageTitle  PageTitle "
     "  Brahot Tifzoret     "
-    " Chida   Sipor  "
+    "   Sipor Parasha   "
     " Todot Todot  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
