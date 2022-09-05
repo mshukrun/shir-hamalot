@@ -22,8 +22,8 @@ const TextDiv = styled.div`
 const CreditDiv = styled.div`
   position: absolute;
   ${RegularText}
-  bottom: 20px;
-  right: 145px;
+  bottom: 60px;
+  right: 25px;
   text-decoration: underline;
 `;
 

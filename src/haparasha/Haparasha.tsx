@@ -17,17 +17,16 @@ const BodyContainer = styled.div`
   display: grid;
   height: 3090px;
   width: 1100px;
-  grid-template-rows: 240px 700px 320px 250px 100px 650px 180px 180px 350px;
+  grid-template-rows: 240px 580px 390px 290px 100px 700px 400px 300px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    " Mahane Yahe   "
-    " Mahane Shmita    "
+    " Shmita Mahane   "
+    " Chida  Yahe    "
     "PageTitle  PageTitle "
     "  Brahot Tifzoret     "
-    " Sipor Parasha  "
-    " Sipor   Chida  "
+    "   Sipor Parasha   "
     " Todot Todot  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
