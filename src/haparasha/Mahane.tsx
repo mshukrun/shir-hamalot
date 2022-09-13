@@ -19,6 +19,7 @@ const OLInner = styled.ol`
   ${RegularPlusText}
   text-align: right;
   padding-right: 20px;
+  padding-bottom: 8px;
   list-style: hebrew;
 `;
 
@@ -27,6 +28,7 @@ const TextDiv = styled.div`
   top: 58px;
   right: 16px;
   text-align: right;
+  padding-bottom: 8px;
 `;
 
 const CreditDiv = styled.div`
@@ -50,7 +52,10 @@ const Mahane = () => {
               <TextDiv>{answers[0]}</TextDiv>
               <OLInner>
                 {answers.slice(1).map((answer) => (
-                  <li key={faker.datatype.uuid()}>
+                  <li
+                    key={faker.datatype.uuid()}
+                    style={{ paddingBottom: "4px" }}
+                  >
                     <TextDiv>{answer}</TextDiv>
                   </li>
                 ))}

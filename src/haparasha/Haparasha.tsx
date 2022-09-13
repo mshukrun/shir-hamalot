@@ -15,18 +15,18 @@ import Magic from "./Magic";
 
 const BodyContainer = styled.div`
   display: grid;
-  height: 3090px;
-  width: 1100px;
-  grid-template-rows: 240px 580px 390px 290px 100px 700px 400px 300px;
+  height: 3280px;
+  width: 1200px;
+  grid-template-rows: 280px 860px 550px 100px 700px 350px 260px 270px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    "   Mahane  Yahe "
-    " Shmita Chida"
+    "   Mahane  Sipor  "
     "PageTitle  PageTitle "
     "  Brahot Parasha     "
-    "   Sipor Magic   "
+    "   Yahe Magic   "
+    " Shmita Chida"
     " Todot Todot  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
