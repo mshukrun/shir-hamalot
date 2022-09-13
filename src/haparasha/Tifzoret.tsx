@@ -13,13 +13,13 @@ const OL = styled.ol`
   font-family: "David Libre", serif;
   font-size: 24px;
   line-height: 30px;
-  padding: 10px 20px;
-  margin-top: 420px;
+  padding: 10px 40px;
+  margin-top: 10px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  max-height: 160px;
+  max-height: 460px;
   max-width: 600px;
 `;
 
