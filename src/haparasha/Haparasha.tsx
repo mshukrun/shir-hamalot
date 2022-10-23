@@ -15,16 +15,16 @@ import OtherLines from "./OtherLines";
 
 const BodyContainer = styled.div`
   display: grid;
-  height: 3090px;
-  width: 1100px;
-  grid-template-rows: 240px 580px 480px 200px 100px 500px 300px 300px 300px;
+  height: 3280px;
+  width: 1200px;
+  grid-template-rows: 280px 900px 510px 100px 200px 500px 300px 300px 300px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
     " Mahane  Tifzoret "
-    "    Sipor  Chida "
     "PageTitle  PageTitle "
+    "    Sipor  Chida "
     "  Brahot Parasha     "
     "    Brahot  A "
     " Yahe  A "
