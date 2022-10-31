@@ -14,12 +14,12 @@ const OL = styled.ol`
   font-size: 24px;
   line-height: 30px;
   padding: 10px 20px;
-  margin-top: 420px;
+  margin-top: 490px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  max-height: 160px;
+  max-height: 200px;
   max-width: 600px;
 `;
 
