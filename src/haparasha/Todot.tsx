@@ -31,6 +31,13 @@ const Todot = () => {
         <li>
           <TextDiv>{l10n.todot.first}</TextDiv>
         </li>
+        {l10n.todot.second1 !== "" ? (
+          <li>
+            <TextDiv>{l10n.todot.second1}</TextDiv>
+          </li>
+        ) : (
+          <></>
+        )}
         {l10n.todot.second !== "" ? (
           <li>
             <TextDiv>{l10n.todot.second}</TextDiv>
