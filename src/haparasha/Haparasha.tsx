@@ -10,24 +10,26 @@ import Yahe from "./Yahe";
 import Todot from "./Todot";
 import PageTitle from "./PageTitle";
 import Sipor from "./Sipor";
-import Tifzoret from "./Tifzoret";
 import Bad from "./Bad";
+import Sodoko from "./Sodoko";
+import Magic from "./Magic";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 3270px;
   width: 1200px;
-  grid-template-rows: 240px 950px 200px 290px 100px 750px 270px 200px 400px;
+  grid-template-rows: 240px 890px 280px 270px 100px 480px 280px 270px 250px 300px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    " Parasha  Sipor    "
-    " Chida   Sipor   "
+    "   Mahane  Parasha  "
+    "    Mahane  Chida "
     "PageTitle  PageTitle "
-    "  Brahot Tifzoret     "
-    "   Mahane   Bad "
-    "   Mahane   Yahe "
+    "  Brahot Sodoko     "
+    "  Brahot Yahe     "
+    "   Bad   Sipor "
+    "   Bad   Magic "
     " Todot Todot  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -46,9 +48,10 @@ const Haparasha = () => {
       <Mahane />
       <Parasha />
       <Chida />
-      <Tifzoret />
+      <Sodoko />
       <Sipor />
       <Bad />
+      <Magic />
       <Todot />
     </BodyContainer>
   );
