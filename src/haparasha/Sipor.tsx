@@ -30,7 +30,7 @@ const HemshehDiv = styled.div`
   position: absolute;
   ${RegularText}
   font-weight: 600;
-  bottom: 45px;
+  bottom: 10px;
   left: 35px;
 `;
 
