@@ -18,18 +18,18 @@ const BodyContainer = styled.div`
   display: grid;
   height: 3270px;
   width: 1200px;
-  grid-template-rows: 240px 890px 280px 270px 100px 480px 280px 270px 250px 300px;
+  grid-template-rows: 240px 890px 280px 270px 100px 480px 280px 360px 220px 270px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    "   Mahane  Parasha  "
-    "    Mahane  Chida "
+    "   Mahane  Bad  "
+    "    Mahane  Bad "
     "PageTitle  PageTitle "
     "  Brahot Sodoko     "
     "  Brahot Yahe     "
-    "   Bad   Sipor "
-    "   Bad   Magic "
+    "   Sipor   Magic "
+    "   Parasha  Chida  "
     " Todot Todot  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
