@@ -10,7 +10,7 @@ const TashbetzBox = styled(BasicBox)`
 
 const OL = styled.ol`
   ${RegularText}
-  padding: 5px 60px 10px 0;
+  padding: 300px 60px 10px 0;
   list-style-type: none;
 `;
 
@@ -54,7 +54,7 @@ const TableDiv = styled.div`
   position: absolute;
   ${RegularText}
   top: 100px;
-  left: 60px;
+  left: 100px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   tr {
