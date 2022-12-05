@@ -43,6 +43,8 @@ const Magic = () => {
   const lines = l10n.magic.content.split("|");
   const amount = l10n.magic.amount;
   const squares = new Array(amount).fill(1);
+  console.log({ lines, amount, squares });
+
   const cells = new Array(lines.length / amount).fill(1);
 
   return (

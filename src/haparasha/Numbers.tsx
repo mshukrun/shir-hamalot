@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  BasicBox,
-  DavidMediumText,
-  RegularText,
-  SubtitleDiv,
-  TitleDiv,
-} from "../Common";
+import { BasicBox, RegularText } from "../Common";
+import ComplexTitle from "../ComplexTitle";
 import l10n from "./l10n.json";
 
 const NumbersBox = styled(BasicBox)`
@@ -17,32 +12,76 @@ const NumbersBox = styled(BasicBox)`
   justify-content: flex-start;
 `;
 
-const ContentBox = styled.div`
-  ${DavidMediumText}
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  padding: 0 10px;
+const TableDiv = styled.div`
+  position: absolute;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+  bottom: 20px;
+  left: 50px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  td {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 50px;
+    height: 50px;
+  }
 `;
 
-const TextDiv = styled.div`
+const TdDiv = styled.div`
   ${RegularText}
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 0 10px;
-  margin-bottom: 4px;
+`;
+
+const QuestionsDiv = styled.div`
+  ${RegularText}
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 20px;
+`;
+
+const QuestionDiv = styled.div`
+  ${RegularText}
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid black;
 `;
 
 const Numbers = () => {
+  const questions = l10n.numbers.content.split("|");
+  const numbers = l10n.numbers.numbers.split("|");
   return (
     <NumbersBox dir="RTL">
-      <TitleDiv>{l10n.numbers.title}</TitleDiv>
-      <SubtitleDiv>{l10n.numbers.subtitle}</SubtitleDiv>
-      <ContentBox>{l10n.numbers.content}</ContentBox>
-      {l10n.numbers.note && <TextDiv>{l10n.numbers.note}</TextDiv>}
+      <ComplexTitle
+        title={l10n.numbers.title}
+        subtitle={l10n.numbers.subtitle}
+      />
+      <QuestionsDiv>
+        {questions.map((question: string) => {
+          return <QuestionDiv>{question}</QuestionDiv>;
+        })}
+      </QuestionsDiv>
+      <TableDiv>
+        <table cellSpacing={0} cellPadding={0}>
+          <tbody>
+            <tr>
+              {numbers.map((number: string) => {
+                return (
+                  <td>
+                    <TdDiv>{number}</TdDiv>
+                  </td>
+                );
+              })}
+            </tr>
+          </tbody>
+        </table>
+      </TableDiv>
     </NumbersBox>
   );
 };
