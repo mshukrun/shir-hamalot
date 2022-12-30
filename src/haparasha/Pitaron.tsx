@@ -41,10 +41,14 @@ const OL = styled.ol`
   list-style-type: disc;
   padding: 4px 25px 4px 10px;
   transform: rotate(-180deg);
+  font-size: 10px;
+  line-height: 12px;
 `;
 
 const TextDiv = styled.div`
   ${TinyText}
+  font-size: 10px;
+  line-height: 12px;
 `;
 
 const Pitaron: React.FC<{

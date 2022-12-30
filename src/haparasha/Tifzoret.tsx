@@ -14,7 +14,7 @@ const OL = styled.ol`
   font-size: 24px;
   line-height: 30px;
   padding: 10px 20px;
-  margin-top: 490px;
+  margin-top: -10px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
@@ -40,8 +40,8 @@ const TableDiv = styled.div`
   font-weight: 400;
   font-size: 22px;
   line-height: 24px;
-  top: 80px;
-  left: 100px;
+  top: 130px;
+  left: 190px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {

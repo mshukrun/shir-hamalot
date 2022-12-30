@@ -32,7 +32,7 @@ const TextDiv = styled.div`
 const CreditDiv = styled.div`
   position: absolute;
   ${RegularText}
-  bottom: 30px;
+  bottom: 10px;
   left: 25px;
   text-decoration: underline;
 `;

@@ -53,7 +53,7 @@ const Todot = () => {
         </li>
       </OL>
       <Gniza r="20px" b="20px" />
-      <Pitaron l="10px" b="10px" w="55%" />
+      <Pitaron l="10px" b="5px" w="56%" />
     </TodotBox>
   );
 };
