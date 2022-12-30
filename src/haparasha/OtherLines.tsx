@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { faker } from "@faker-js/faker";
-import { BasicBox, RegularPlusText, SubtitleDiv } from "../Common";
+import { BasicBox, RegularText, TitleDiv } from "../Common";
 import l10n from "./l10n.json";
 
 const OtherBox = styled(BasicBox)`
@@ -9,13 +9,13 @@ const OtherBox = styled(BasicBox)`
 `;
 
 const TextDiv = styled.div`
-  ${RegularPlusText}
+  ${RegularText}
   padding: 8px 16px;
 `;
 
 const OL = styled.ol`
-  ${RegularPlusText}
-  padding: 10px 40px 10px;
+  ${RegularText}
+  padding: 0 40px 10px;
 `;
 
 const OtherLines: React.FC<{
@@ -29,7 +29,7 @@ const OtherLines: React.FC<{
   const lines = l10n.other?.["content" + num].split("|");
   return (
     <OtherBox dir="RTL" style={{ gridArea: gridArea }}>
-      <SubtitleDiv style={{ textAlign: "center" }}>{title}</SubtitleDiv>
+      <TitleDiv>{title}</TitleDiv>
       <OL style={{ listStyle: listStyle }}>
         {lines.map((line: string) => {
           return (

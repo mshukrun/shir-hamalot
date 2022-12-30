@@ -56,7 +56,9 @@ const Chida = () => {
   const lines = l10n.chida.content.split("|");
   return (
     <ChidaBox dir="RTL">
-      <TitleDiv>{l10n.chida.title}</TitleDiv>
+      <TitleDiv>
+        {l10n.chida.gil ? l10n.chida.title : l10n.chida.title2}
+      </TitleDiv>
       <InnerBox>
         <OL>
           {lines.map((line) => (
