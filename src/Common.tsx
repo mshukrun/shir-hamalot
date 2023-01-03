@@ -90,6 +90,8 @@ export const TitleDiv = styled.div`
 export const SubtitleDiv = styled.div`
   ${SubTitleText}
   margin: 10px auto;
+  text-align: center;
+  padding: 0 10px;
 `;
 
 export const PageNumberDiv = styled.div`

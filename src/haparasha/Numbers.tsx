@@ -17,7 +17,7 @@ const TableDiv = styled.div`
   font-weight: 400;
   font-size: 22px;
   line-height: 24px;
-  bottom: 5px;
+  bottom: 30px;
   left: 50px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
@@ -43,7 +43,7 @@ const QuestionsDiv = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 0px 20px;
+  margin: 20px 40px;
 `;
 
 const QuestionDiv = styled.div`
