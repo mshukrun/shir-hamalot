@@ -13,14 +13,14 @@ const OL = styled.ol`
   font-family: "David Libre", serif;
   font-size: 24px;
   line-height: 30px;
-  padding: 10px 20px;
-  margin-top: -10px;
+  padding: 10px 40px;
+  margin-top: 0px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
   max-height: 200px;
-  max-width: 600px;
+  max-width: 300px;
 `;
 
 const TextDiv = styled.div`
@@ -40,8 +40,8 @@ const TableDiv = styled.div`
   font-weight: 400;
   font-size: 22px;
   line-height: 24px;
-  top: 130px;
-  left: 190px;
+  top: 80px;
+  left: 40px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {

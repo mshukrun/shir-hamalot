@@ -13,7 +13,7 @@ const BrahotBox = styled(BasicBox)`
 const TableDiv = styled.div`
   display: flex;
   flex-flow: column;
-  padding: 5px 32px;
+  padding: 5px 88px;
 `;
 
 const RowDiv = styled.div`
@@ -58,31 +58,6 @@ const Cell3Div = styled(CellDiv)`
   align-content: flex-end;
   justify-content: flex-start;
 `;
-
-// const AllRowCellDiv = styled(CellDiv)`
-//   text-align: right;
-//   align-content: flex-end;
-//   justify-content: flex-start;
-//   width: 480px;
-// `;
-
-// const LastLineDiv = styled.div`
-//   display: flex;
-//   text-align: right;
-//   align-items: center;
-//   justify-content: flex-start;
-//   padding: 8px 30px 0;
-//   column-gap: 8px;
-// `;
-
-// const TextNoPaddingDiv = styled.div`
-//   ${RegularText}
-// `;
-
-// const TextDiv = styled.div`
-//   ${RegularText}
-//   padding: 8px 30px 0;
-// `;
 
 const Brahot = () => {
   const lines = l10n.barchot.content.split("||");

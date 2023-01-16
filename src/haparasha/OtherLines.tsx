@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { faker } from "@faker-js/faker";
-import { BasicBox, RegularText, TitleDiv } from "../Common";
+import { BasicBox, RegularText, SubtitleDiv, TitleDiv } from "../Common";
 import l10n from "./l10n.json";
 
 const OtherBox = styled(BasicBox)`
@@ -18,6 +18,13 @@ const OL = styled.ol`
   padding: 0 40px 10px;
 `;
 
+const CreditDiv = styled.div`
+  position: absolute;
+  ${RegularText}
+  bottom: 10px;
+  left: 25px;
+`;
+
 const OtherLines: React.FC<{
   num: number;
   gridArea: string;
@@ -26,10 +33,17 @@ const OtherLines: React.FC<{
   // @ts-ignore
   const title = l10n.other?.["title" + num];
   // @ts-ignore
+  const subtitle = l10n.other?.["subtitle" + num];
+  // @ts-ignore
   const lines = l10n.other?.["content" + num].split("|");
+  // @ts-ignore
+  const credit = l10n.other?.["credit" + num];
+  console.log({ credit });
+
   return (
     <OtherBox dir="RTL" style={{ gridArea: gridArea }}>
       <TitleDiv>{title}</TitleDiv>
+      {subtitle && <SubtitleDiv>{subtitle}</SubtitleDiv>}
       <OL style={{ listStyle: listStyle }}>
         {lines.map((line: string) => {
           return (
@@ -39,6 +53,7 @@ const OtherLines: React.FC<{
           );
         })}
       </OL>
+      {credit && <CreditDiv>{credit}</CreditDiv>}
     </OtherBox>
   );
 };

@@ -8,6 +8,7 @@ const TitleBox = styled(BasicBox)`
   grid-area: PageTitle;
   position: relative;
   border: none;
+  min-height: 500px;
 `;
 
 const PageTitle = () => {
