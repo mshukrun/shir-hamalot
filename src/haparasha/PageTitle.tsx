@@ -9,6 +9,7 @@ const TitleBox = styled(BasicBox)`
   position: relative;
   border: none;
   min-height: 500px;
+  gap: 16px;
 `;
 
 const PageTitle = () => {
