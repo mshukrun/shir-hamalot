@@ -13,23 +13,20 @@ import Numbers from "./Numbers";
 import Parasha from "./Parasha";
 import OtherParasha from "./OtherParasha";
 import Sipor from "./Sipor";
+import IdanSong from "./IdanSong";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 3080px;
   width: 1200px;
-  grid-template-rows: 240px 1020px 170px 250px 120px 430px 380px 350px 350px;
+  grid-template-rows: 240px 800px 650px 400px 950px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
-    "Vort Vort  "
-    "   Chida OtherParasha"
-    "   Parasha Yahe"
-    "PageTitle  PageTitle "
-    "  Mahane    Brahot     "
-    "  Bad   Brahot     "
-    "Sipor  Numbers   "
-    " Todot Todot   ";
+    "IdanSong1 IdanSong2  "
+    "IdanSong1 IdanSong3  "
+    "IdanSong5 IdanSong3  "
+    "IdanSong5 IdanSong4  ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
   column-gap: 8px;
@@ -40,18 +37,11 @@ const Haparasha = () => {
   return (
     <BodyContainer>
       <Title />
-      <PageTitle />
-      <Vort />
-      <Brahot />
-      <Yahe />
-      <Mahane />
-      <Chida />
-      <Bad />
-      <Numbers />
-      <Todot />
-      <Parasha />
-      <OtherParasha />
-      <Sipor />
+      <IdanSong num={1} gridArea="IdanSong1" />
+      <IdanSong num={2} gridArea="IdanSong2" />
+      <IdanSong num={3} gridArea="IdanSong3" />
+      <IdanSong num={4} gridArea="IdanSong4" />
+      <IdanSong num={5} gridArea="IdanSong5" />
     </BodyContainer>
   );
 };
