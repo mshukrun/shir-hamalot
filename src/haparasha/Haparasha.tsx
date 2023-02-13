@@ -19,7 +19,7 @@ const BodyContainer = styled.div`
   display: grid;
   height: 3080px;
   width: 1200px;
-  grid-template-rows: 220px 950px 290px 250px 120px 400px 250px 200px 380px 350px;
+  grid-template-rows: 220px 970px 300px 250px 120px 400px 250px 200px 380px 350px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
