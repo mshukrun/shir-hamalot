@@ -12,8 +12,9 @@ const BrahotBox = styled(BasicBox)`
 
 const TableDiv = styled.div`
   display: flex;
+  align-items: center;
   flex-flow: column;
-  padding: 5px 88px;
+  padding: 5px 10px;
 `;
 
 const RowDiv = styled.div`

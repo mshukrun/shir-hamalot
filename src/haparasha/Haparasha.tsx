@@ -14,23 +14,28 @@ import Sipor from "./Sipor";
 import OtherLines from "./OtherLines";
 import Magic from "./Magic";
 import OtherSong from "./OtherSong";
+import Brahot from "./Brahot";
+import FindWords from "./FindWords";
+import IdanSong from "./IdanSong";
 
 const BodyContainer = styled.div`
   display: grid;
-  height: 3080px;
-  width: 1200px;
-  grid-template-rows: 220px 970px 300px 250px 120px 400px 250px 200px 380px 350px;
+  height: 3270px;
+  width: 1300px;
+  grid-template-rows: 200px 850px 300px 280px 270px 120px 330px 320px 320px 390px 170px 270px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    "  Yahe   Shririm "
-    "  Sipor   Parasha"
+    "  Parasha    Shririm "
+    "  Sipor  Yahe "
+    " Numbers     Numbers     "
     "PageTitle  PageTitle "
-    "  Mahane      Shiron   "
-    "  Magic      Shiron   "
-    " Chida    Shiron     "
-    "  Bad Numbers   "
+    "        Brahot  Mahane "
+    "        Brahot   Magic"
+    " Bad     Shiron     "
+    "  IdanSong FindWords   "
+    " IdanSong Chida"
     " Todot Todot   ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -55,6 +60,9 @@ const Haparasha = () => {
       <OtherSong gridArea="Shiron" num={2} listStyle="none" />
       <Sipor />
       <Magic />
+      <Brahot />
+      <FindWords />
+      <IdanSong num={4} gridArea="IdanSong" />
     </BodyContainer>
   );
 };
