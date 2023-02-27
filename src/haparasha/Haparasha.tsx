@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Chida from "./Chida";
 import Mahane from "./Mahane";
 import Title from "./Title";
 import Vort from "./Vort";
@@ -15,27 +14,27 @@ import OtherLines from "./OtherLines";
 import Magic from "./Magic";
 import OtherSong from "./OtherSong";
 import Brahot from "./Brahot";
-import FindWords from "./FindWords";
-import IdanSong from "./IdanSong";
+import Tifzoret from "./Tifzoret";
+import NumbersPurim from "./NumbersPurim";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 3270px;
   width: 1300px;
-  grid-template-rows: 200px 850px 300px 280px 270px 120px 330px 320px 320px 390px 170px 270px;
+  grid-template-rows: 200px 850px 300px 280px 200px 120px 360px 300px 150px 320px 250px 300px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "Title Title"
     "Vort Vort  "
-    "  Parasha    Shririm "
+    "  Parasha    Shipurim "
     "  Sipor  Yahe "
     " Numbers     Numbers     "
     "PageTitle  PageTitle "
     "        Brahot  Mahane "
     "        Brahot   Magic"
-    " Bad     Shiron     "
-    "  IdanSong FindWords   "
-    " IdanSong Chida"
+    " Brahot     Jokes     "
+    "  Bad Tifzoret   "
+    " Songs NumbersPurim"
     " Todot Todot   ";
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -51,18 +50,18 @@ const Haparasha = () => {
       <Vort />
       <Yahe />
       <Mahane />
-      <Chida />
       <Bad />
       <Numbers />
       <Todot />
       <Parasha />
-      <OtherLines gridArea="Shririm" num={1} listStyle="none" />
-      <OtherSong gridArea="Shiron" num={2} listStyle="none" />
+      <OtherLines gridArea="Shipurim" num={1} listStyle="number" />
+      <OtherSong gridArea="Jokes" num={2} listStyle="none" />
       <Sipor />
       <Magic />
       <Brahot />
-      <FindWords />
-      <IdanSong num={4} gridArea="IdanSong" />
+      <NumbersPurim />
+      <OtherLines num={4} gridArea="Songs" listStyle="none" />
+      <Tifzoret />
     </BodyContainer>
   );
 };

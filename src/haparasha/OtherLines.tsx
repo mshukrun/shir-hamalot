@@ -10,12 +10,13 @@ const OtherBox = styled(BasicBox)`
 
 const TextDiv = styled.div`
   ${RegularText}
-  padding: 8px 16px;
+  padding: 8px;
 `;
 
 const OL = styled.ol`
   ${RegularText}
-  padding: 0 19px;
+  padding: 0 32px;
+  margin-right: 16px;
 `;
 
 const CreditDiv = styled.div`

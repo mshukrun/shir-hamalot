@@ -8,19 +8,21 @@ const TifzoretBox = styled(BasicBox)`
   position: relative;
 `;
 
-const OL = styled.ol`
+const OL = styled.div`
+  position: relative;
   font-weight: 400;
   font-family: "David Libre", serif;
   font-size: 24px;
   line-height: 30px;
   padding: 10px 40px;
-  margin-top: 0px;
+  margin-top: 150px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  max-height: 200px;
-  max-width: 300px;
+  height: 120px;
+  width: 600px;
+  white-space: normal;
 `;
 
 const TextDiv = styled.div`
@@ -38,17 +40,17 @@ const TdDiv = styled.div`
 const TableDiv = styled.div`
   position: absolute;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 26px;
   top: 80px;
-  left: 40px;
+  left: 80px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {
     border-top: 1px solid black;
     border-right: 1px solid black;
-    width: 37px;
-    height: 37px;
+    width: 40px;
+    height: 40px;
   }
 `;
 
@@ -64,11 +66,7 @@ const Tifzoret = () => {
       <TitleDiv>{l10n.tifzoret.title}</TitleDiv>
       <OL>
         {milaArr.map((mila) => {
-          return (
-            <li>
-              <TextDiv>{mila}</TextDiv>
-            </li>
-          );
+          return <TextDiv>{mila}</TextDiv>;
         })}
       </OL>
       <TableDiv>
