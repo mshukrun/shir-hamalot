@@ -45,12 +45,21 @@ const Todot = () => {
         ) : (
           <></>
         )}
-        <li>
-          <TextDiv>{l10n.todot.third}</TextDiv>
-        </li>
-        <li>
-          <TextDiv>{l10n.todot.four}</TextDiv>
-        </li>
+        {l10n.todot.third !== "" ? (
+          <li>
+            <TextDiv>{l10n.todot.third}</TextDiv>
+          </li>
+        ) : (
+          <></>
+        )}
+
+        {l10n.todot.four !== "" ? (
+          <li>
+            <TextDiv>{l10n.todot.four}</TextDiv>
+          </li>
+        ) : (
+          <></>
+        )}
       </OL>
       <Gniza r="20px" b="20px" />
       <Pitaron l="10px" b="5px" w="56%" />

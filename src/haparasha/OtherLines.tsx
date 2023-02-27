@@ -15,7 +15,7 @@ const TextDiv = styled.div`
 
 const OL = styled.ol`
   ${RegularText}
-  padding: 0 40px 10px;
+  padding: 0 19px;
 `;
 
 const CreditDiv = styled.div`

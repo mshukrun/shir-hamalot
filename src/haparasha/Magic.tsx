@@ -27,15 +27,15 @@ const TableDiv = styled.div<{
   index: number;
 }>`
   position: absolute;
-  top: ${({ index }) => index * 140 + 80}px;
+  top: ${({ index }) => index * 120 + 80}px;
   right: 30px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {
     border-top: 1px solid black;
     border-right: 1px solid black;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 `;
 
