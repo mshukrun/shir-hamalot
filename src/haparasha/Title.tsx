@@ -34,7 +34,7 @@ const ParashaDiv = styled.div`
   position: absolute;
   font-weight: 600;
   font-size: 44px;
-  top: 110px;
+  top: 120px;
   left: 88px;
   color: darkslategrey;
 `;

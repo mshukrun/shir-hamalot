@@ -7,35 +7,36 @@ import Yahe from "./Yahe";
 import Todot from "./Todot";
 import PageTitle from "./PageTitle";
 import Bad from "./Bad";
-import Numbers from "./Numbers";
 import Parasha from "./Parasha";
 import Sipor from "./Sipor";
-import OtherLines from "./OtherLines";
 import Magic from "./Magic";
-import OtherSong from "./OtherSong";
 import Brahot from "./Brahot";
-import Tifzoret from "./Tifzoret";
-import NumbersPurim from "./NumbersPurim";
+import Chida from "./Chida";
+import FindWords from "./FindWords";
 
 const BodyContainer = styled.div`
   display: grid;
-  height: 3270px;
-  width: 1300px;
-  grid-template-rows: 200px 850px 300px 280px 200px 120px 360px 300px 150px 320px 250px 330px;
+  height: 2800px;
+  width: 1200px;
+  grid-template-rows: 220px //10
+    970px //20
+    500px //30
+    120px //50
+    450px //60
+    250px //70
+    340px //80
+    220px //90
+    300px; //100
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "Title Title"
-    "Vort Vort  "
-    "  Parasha    Shipurim "
-    "  Sipor  Yahe "
-    " Numbers     Numbers     "
-    "PageTitle  PageTitle "
-    "        Brahot  Mahane "
-    "        Brahot   Magic"
-    " Brahot     Jokes     "
-    "  Bad Tifzoret   "
-    " Songs NumbersPurim"
-    " Todot Todot   ";
+  grid-template-areas: "Title Title" //10
+    "Vort Vort  " //20
+    "     Parasha FindWords" //30
+    "PageTitle  PageTitle " //50
+    "        Brahot   Mahane   " //60
+    "        Brahot   Bad   " //70
+    "        Yahe   Sipor" //80
+    "  Chida Magic   " //90
+    " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
   row-gap: 8px;
   column-gap: 8px;
@@ -51,17 +52,13 @@ const Haparasha = () => {
       <Yahe />
       <Mahane />
       <Bad />
-      <Numbers />
-      <Todot />
       <Parasha />
-      <OtherLines gridArea="Shipurim" num={1} listStyle="number" />
-      <OtherSong gridArea="Jokes" num={2} listStyle="none" />
       <Sipor />
       <Magic />
       <Brahot />
-      <NumbersPurim />
-      <OtherLines num={4} gridArea="Songs" listStyle="none" />
-      <Tifzoret />
+      <Chida />
+      <FindWords />
+      <Todot />
     </BodyContainer>
   );
 };
