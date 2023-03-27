@@ -10,8 +10,8 @@ const FindWordsBox = styled(BasicBox)`
 
 const TextDiv = styled.div`
   ${RegularPlusText}
-  width: 300px;
-  padding: 40px;
+  width: 500px;
+  padding: 10px 40px;
 `;
 
 const TdDiv = styled.div`
@@ -25,8 +25,8 @@ const TableDiv = styled.div`
   font-weight: 400;
   font-size: 22px;
   line-height: 24px;
-  top: 80px;
-  left: 40px;
+  top: 200px;
+  left: 140px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {
@@ -38,13 +38,13 @@ const TableDiv = styled.div`
 `;
 
 const FindWords = () => {
-  const shorot = l10n.other?.content3;
+  const shorot = l10n.other?.content1;
   const shoraArr: string[] = shorot.split("|");
 
   return (
     <FindWordsBox dir="RTL">
-      <TitleDiv>{l10n.other?.title3}</TitleDiv>
-      <TextDiv>{l10n.other?.subtitle3}</TextDiv>
+      <TitleDiv>{l10n.other?.title1}</TitleDiv>
+      <TextDiv>{l10n.other?.subtitle1}</TextDiv>
 
       <TableDiv>
         <table cellSpacing={0} cellPadding={0}>
