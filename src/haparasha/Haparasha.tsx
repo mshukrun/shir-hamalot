@@ -11,34 +11,33 @@ import Parasha from "./Parasha";
 import Sipor from "./Sipor";
 import Brahot from "./Brahot";
 import Chida from "./Chida";
-import FindWords from "./FindWords";
 import Numbers from "./Numbers";
 import OtherLines from "./OtherLines";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
-  width: 1500px;
+  width: 1200px;
   grid-template-rows: 220px //10
-    1310px //20
-    200px //30
-    350px //30
+    830px //20
+    300px //30
+    400px //40
     120px //50
-    420px //60
+    400px //60
     350px //70
-    550px //80
-    300px //90
-    350px; //100
-  grid-template-columns: 1fr 1fr;
+    280px //80
+    280px //90
+    300px; //100
+  grid-template-columns: 600px 600px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "  Chida    Yahe " //25
-    "  Parasha    Numbers " //30
+    "  Bad Sipor   " //30
+    "   Omer   Numbers " //40
     "PageTitle  PageTitle " //50
     "        Brahot   Mahane   " //60
     "        Brahot   Azarim   " //70
-    "        Brahot   FindWords" //80
-    "  Bad Sipor   " //90
+    "        Chida   Noa" //80
+    "  Parasha     Yahe " //90
     " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -60,9 +59,10 @@ const Haparasha = () => {
       <Brahot />
       <Numbers />
       <Chida />
-      <FindWords />
       <Todot />
+      <OtherLines gridArea="Omer" num={1} listStyle="none" />
       <OtherLines gridArea="Azarim" num={2} listStyle="none" />
+      <OtherLines gridArea="Noa" num={3} listStyle="none" />
     </BodyContainer>
   );
 };
