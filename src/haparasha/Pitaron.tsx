@@ -47,8 +47,6 @@ const OL = styled.ol`
 
 const TextDiv = styled.div`
   ${TinyText}
-  font-size: 10px;
-  line-height: 12px;
 `;
 
 const Pitaron: React.FC<{

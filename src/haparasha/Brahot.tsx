@@ -60,8 +60,15 @@ const Cell3Div = styled(CellDiv)`
   justify-content: flex-start;
 `;
 
+const TextDiv = styled.div`
+  ${RegularPlusText}
+  width: 100%;
+  padding: 10px 40px;
+`;
+
 const Brahot = () => {
   const lines = l10n.barchot.content.split("||");
+  const texts = l10n.other.content3.split("|");
 
   return (
     <BrahotBox dir="RTL">
@@ -90,9 +97,11 @@ const Brahot = () => {
         <Checked size={18} />
         <TextNoPaddingDiv>{l10n.barchot.shikor_shehacol}</TextNoPaddingDiv>
         <Smile size={18} />
-      </LastLineDiv>
+      </LastLineDiv> */}
 
-      <TextDiv>{l10n.barchot.shikor}</TextDiv> */}
+      {texts.map((text) => (
+        <TextDiv key={faker.datatype.uuid()}>{text}</TextDiv>
+      ))}
     </BrahotBox>
   );
 };

@@ -10,7 +10,7 @@ const FindWordsBox = styled(BasicBox)`
 
 const TextDiv = styled.div`
   ${RegularPlusText}
-  width: 500px;
+  width: 100%;
   padding: 10px 40px;
 `;
 
@@ -25,8 +25,8 @@ const TableDiv = styled.div`
   font-weight: 400;
   font-size: 22px;
   line-height: 24px;
-  top: 200px;
-  left: 140px;
+  top: 150px;
+  left: 220px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {
