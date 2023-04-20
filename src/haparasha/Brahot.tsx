@@ -30,7 +30,7 @@ const CellDiv = styled.div`
   bottom: 12px;
   left: 35px;
   border: 1px solid black;
-  width: 160px;
+  width: 240px;
   min-height: 50px;
   text-align: center;
   padding: 8px;
@@ -54,6 +54,12 @@ const HeaderCellDiv = styled(CellDiv)`
   white-space: nowrap;
 `;
 
+const HeaderCellBoldDiv = styled(HeaderCellDiv)`
+  font-weight: 800;
+  font-size: 27px;
+  text-decoration: underline;
+`;
+
 const Cell3Div = styled(CellDiv)`
   text-align: right;
   align-content: flex-end;
@@ -64,11 +70,12 @@ const TextDiv = styled.div`
   ${RegularPlusText}
   width: 100%;
   padding: 10px 40px;
+  font-weight: 600;
 `;
 
 const Brahot = () => {
   const lines = l10n.barchot.content.split("||");
-  const texts = l10n.other.content3.split("|");
+  const texts = l10n.barchot.comment.split("|");
 
   return (
     <BrahotBox dir="RTL">
@@ -78,9 +85,9 @@ const Brahot = () => {
       />
       <TableDiv>
         <RowDiv>
-          <HeaderCellDiv></HeaderCellDiv>
+          {/* <HeaderCellDiv></HeaderCellDiv> */}
           <HeaderCellDiv>{l10n.barchot.first}</HeaderCellDiv>
-          <HeaderCellDiv>{l10n.barchot.last}</HeaderCellDiv>
+          <HeaderCellBoldDiv>{l10n.barchot.last}</HeaderCellBoldDiv>
         </RowDiv>
         {lines.map((line) => {
           const cells = line.split("|");
@@ -88,7 +95,7 @@ const Brahot = () => {
             <RowDiv key={faker.datatype.uuid()}>
               <Cell3Div>{cells[0]}</Cell3Div>
               <Cell2Div>{cells[1]}</Cell2Div>
-              <CellDiv>{cells[2]}</CellDiv>
+              {/* <CellDiv>{cells[2]}</CellDiv> */}
             </RowDiv>
           );
         })}
