@@ -24,10 +24,10 @@ const CommentDiv = styled.div`
   font-weight: 500;
   font-size: 19px;
   line-height: 20px;
-  top: 50px;
-  left: 30px;
+  top: 100px;
+  left: 20px;
   padding: 16px;
-  width: 300px;
+  width: 250px;
 `;
 
 const CreditDiv = styled.div`
