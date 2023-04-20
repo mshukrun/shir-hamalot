@@ -54,6 +54,12 @@ const HeaderCellDiv = styled(CellDiv)`
   white-space: nowrap;
 `;
 
+const HeaderCellBoldDiv = styled(HeaderCellDiv)`
+  font-weight: 800;
+  font-size: 27px;
+  text-decoration: underline;
+`;
+
 const Cell3Div = styled(CellDiv)`
   text-align: right;
   align-content: flex-end;
@@ -64,6 +70,7 @@ const TextDiv = styled.div`
   ${RegularPlusText}
   width: 100%;
   padding: 10px 40px;
+  font-weight: 600;
 `;
 
 const Brahot = () => {
@@ -80,7 +87,7 @@ const Brahot = () => {
         <RowDiv>
           {/* <HeaderCellDiv></HeaderCellDiv> */}
           <HeaderCellDiv>{l10n.barchot.first}</HeaderCellDiv>
-          <HeaderCellDiv>{l10n.barchot.last}</HeaderCellDiv>
+          <HeaderCellBoldDiv>{l10n.barchot.last}</HeaderCellBoldDiv>
         </RowDiv>
         {lines.map((line) => {
           const cells = line.split("|");
