@@ -21,9 +21,9 @@ const BodyContainer = styled.div`
     1350px //20
     240px //40
     120px //50
-    420px //60
-    500px //70
-    220px //80
+    360px //60
+    420px //70
+    190px //80
     320px //90
     290px; //100
   grid-template-columns: 600px 600px;
@@ -33,7 +33,7 @@ const BodyContainer = styled.div`
     "PageTitle  PageTitle " //50
     "        Brahot   Bad    " //60
     "        Brahot  Mahane     " //70
-    "       Yahe  Yahe  " //80
+    "       Brahot  Yahe  " //80
     "  Shiron Magic     " //90
     " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
