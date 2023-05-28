@@ -21,8 +21,8 @@ const BodyContainer = styled.div`
     1350px //20
     240px //40
     120px //50
-    400px //60
-    480px //70
+    420px //60
+    500px //70
     220px //80
     320px //90
     290px; //100
@@ -32,9 +32,9 @@ const BodyContainer = styled.div`
     "   Chida Bilbol     " //40
     "PageTitle  PageTitle " //50
     "        Brahot   Bad    " //60
-    "        Brahot   Shiron    " //70
+    "        Brahot  Mahane     " //70
     "       Yahe  Yahe  " //80
-    "  Mahane Magic     " //90
+    "  Shiron Magic     " //90
     " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
   row-gap: 8px;
