@@ -15,13 +15,13 @@ const OL = styled.div`
   font-size: 24px;
   line-height: 30px;
   padding: 10px 40px;
-  margin-top: 280px;
+  margin-top: 40px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  height: 120px;
-  width: 600px;
+  height: 250px;
+  width: 250px;
   white-space: normal;
 `;
 
@@ -42,8 +42,8 @@ const TableDiv = styled.div`
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  top: 80px;
-  left: 180px;
+  top: 90px;
+  left: 40px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {

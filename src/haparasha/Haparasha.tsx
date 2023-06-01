@@ -10,31 +10,28 @@ import Bad from "./Bad";
 import Brahot from "./Brahot";
 import Chida from "./Chida";
 import Magic from "./Magic";
-import OtherSong from "./OtherSong";
-import OtherLines from "./OtherLines";
+import Tifzoret from "./Tifzoret";
 
 const BodyContainer = styled.div`
   display: grid;
-  height: 2800px;
-  width: 1200px;
   grid-template-rows: 220px //10
-    1350px //20
-    240px //40
+    950px //20
+    220px //30
+    200px //40
     120px //50
-    420px //60
+    440px //60
     500px //70
-    220px //80
-    320px //90
+    190px //80
     290px; //100
-  grid-template-columns: 600px 600px;
+  grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "   Chida Bilbol     " //40
+    "   Magic Tifzoret     " //40
+    "   Chida Tifzoret     " //40
     "PageTitle  PageTitle " //50
     "        Brahot   Bad    " //60
     "        Brahot  Mahane     " //70
     "       Yahe  Yahe  " //80
-    "  Shiron Magic     " //90
     " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -55,8 +52,7 @@ const Haparasha = () => {
       <Chida />
       <Magic />
       <Todot />
-      <OtherSong gridArea="Shiron" num={1} listStyle="none" />
-      <OtherLines gridArea="Bilbol" num={2} listStyle="none" />
+      <Tifzoret />
     </BodyContainer>
   );
 };
