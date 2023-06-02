@@ -11,6 +11,7 @@ import Brahot from "./Brahot";
 import Chida from "./Chida";
 import Magic from "./Magic";
 import Tifzoret from "./Tifzoret";
+import Sipor from "./Sipor";
 
 const BodyContainer = styled.div`
   display: grid;
@@ -21,8 +22,8 @@ const BodyContainer = styled.div`
     120px //50
     440px //60
     500px //70
-    190px //80
-    290px; //100
+    300px //80
+    260px; //100
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
@@ -31,7 +32,7 @@ const BodyContainer = styled.div`
     "PageTitle  PageTitle " //50
     "        Brahot   Bad    " //60
     "        Brahot  Mahane     " //70
-    "       Yahe  Yahe  " //80
+    "       Yahe  Sipor  " //80
     " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -53,6 +54,7 @@ const Haparasha = () => {
       <Magic />
       <Todot />
       <Tifzoret />
+      <Sipor />
     </BodyContainer>
   );
 };
