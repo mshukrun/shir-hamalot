@@ -18,8 +18,8 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1350px //20
-    240px //40
+    1300px //20
+    300px //40
     120px //50
     360px //60
     420px //70
@@ -56,7 +56,10 @@ const Haparasha = () => {
       <Magic />
       <Todot />
       <Sipor />
-      <Tifzoret />
+      <Tifzoret
+        table={{ left: 40 }}
+        words={{ top: 10, width: 300, height: 200 }}
+      />
     </BodyContainer>
   );
 };
