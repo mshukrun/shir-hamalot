@@ -20,6 +20,15 @@ const TdDiv = styled.div`
   align-items: center;
 `;
 
+const FirstTdDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  border: 3px solid black;
+  padding: 4px 0;
+`;
+
 const TableDiv = styled.div`
   position: absolute;
   font-weight: 400;
@@ -49,16 +58,22 @@ const FindWords = () => {
       <TableDiv>
         <table cellSpacing={0} cellPadding={0}>
           <tbody>
-            {shoraArr.map((shora: string) => {
+            {shoraArr.map((shora: string, row: number) => {
               return (
                 <tr>
-                  {Array.from(shora.replaceAll(" ", "")).map((word: string) => {
-                    return (
-                      <td>
-                        <TdDiv>{word}</TdDiv>
-                      </td>
-                    );
-                  })}
+                  {Array.from(shora.replaceAll(" ", "")).map(
+                    (word: string, col: number) => {
+                      return row === 0 && col === 0 ? (
+                        <td>
+                          <FirstTdDiv>{word}</FirstTdDiv>
+                        </td>
+                      ) : (
+                        <td>
+                          <TdDiv>{word}</TdDiv>
+                        </td>
+                      );
+                    }
+                  )}
                 </tr>
               );
             })}
