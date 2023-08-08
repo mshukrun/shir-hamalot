@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { faker } from "@faker-js/faker";
 import { BasicBox, RegularText, MediumText, TitleDiv } from "../Common";
 import l10n from "./l10n.json";
+import OtherAbs from "./OtherAbs";
 
 const ParashaBox = styled(BasicBox)`
   grid-area: Parasha;
@@ -51,6 +52,7 @@ const Parasha = () => {
           })}
         </OL>
       </div>
+      <OtherAbs num={3} b="20px" r="50px" w="450px" />
     </ParashaBox>
   );
 };

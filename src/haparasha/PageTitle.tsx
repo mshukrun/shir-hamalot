@@ -5,17 +5,19 @@ import { BasicBox, PageNumberDiv } from "../Common";
 import ComplexTitle from "../ComplexTitle";
 
 const TitleBox = styled(BasicBox)`
-  grid-area: PageTitle;
   position: relative;
   border: none;
   min-height: 500px;
   gap: 16px;
 `;
 
-const PageTitle = () => {
+const PageTitle: React.FC<{ num: number; gridArea: string }> = ({
+  num,
+  gridArea,
+}) => {
   return (
-    <TitleBox dir="RTL">
-      <PageNumberDiv>{l10n.title.amod + " -2-"}</PageNumberDiv>
+    <TitleBox dir="RTL" style={{ gridArea: gridArea }}>
+      <PageNumberDiv>{`${l10n.title.amod} -${num}-`}</PageNumberDiv>
       <ComplexTitle
         title={l10n.title.shir + " " + l10n.title.hamahalot}
         subtitle={l10n.title.parasha}

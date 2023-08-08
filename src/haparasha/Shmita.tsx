@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { BasicBox, RegularText, SubTitleText, TitleDiv } from "../Common";
-import Havrota from "./Havrota";
 import l10n from "./l10n.json";
 
 const ShmitaBox = styled(BasicBox)`
