@@ -18,31 +18,29 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    590px //20
-    150px //30
-    150px //32
-    420px //35
-    250px //40
+    900px //20
+    250px //30
+    380px //35
+    150px //40
     120px //50
     310px //60
     340px //70
     250px //80
     250px //85
-    180px //90
+    300px //90
     340px; //100
-  grid-template-columns: 600px 600px;
+  grid-template-columns: 670px 670px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "   Tora Beher     " //30
-    "   Tora Briha     " //32
+    "   Tora Gmara     " //30
     "   Hizok Gmara     " //35
-    "   Hidod  Gmara     " //40
+    "   Beher  Briha     " //40
     "PageTitle  PageTitle " //50
     "        Brahot   Bad    " //60
     "        Brahot  Mahane     " //70
     "       Brahot  Yahe  " //80
     "       Parasha  Magic   " //85
-    "  Sipor Sipor     " //90
+    "  Hidod Sipor     " //90
     " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
   row-gap: 8px;
