@@ -12,35 +12,38 @@ import Magic from "./Magic";
 import Sipor from "./Sipor";
 import Parasha from "./Parasha";
 import OtherLines from "./OtherLines";
+import PageImage from "./PageImage";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    900px //20
+    860px //20
     250px //30
     380px //35
-    150px //40
+    230px //40
     120px //50
-    310px //60
+    270px //60
     340px //70
-    250px //80
+    300px //80
     250px //85
-    300px //90
+    150px //90
+    150px //90
     340px; //100
   grid-template-columns: 670px 670px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
     "   Tora Gmara     " //30
     "   Hizok Gmara     " //35
-    "   Beher  Briha     " //40
+    "  Hidod     Magic   " //40
     "PageTitle  PageTitle " //50
     "        Brahot   Bad    " //60
     "        Brahot  Mahane     " //70
-    "       Brahot  Yahe  " //80
-    "       Parasha  Magic   " //85
-    "  Hidod Sipor     " //90
+    "       Brahot   Paint " //80
+    "       Parasha  Yahe    " //85
+    "  Sipor  Briha    " //90
+    "  Sipor Beher     " //90
     " Todot Todot   "; //100
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -68,6 +71,7 @@ const Haparasha = () => {
       <OtherLines gridArea="Beher" num={4} listStyle="none" />
       <OtherLines gridArea="Hidod" num={5} listStyle="none" />
       <OtherLines gridArea="Tora" num={6} listStyle="none" />
+      <PageImage gridArea="Paint" />
     </BodyContainer>
   );
 };
