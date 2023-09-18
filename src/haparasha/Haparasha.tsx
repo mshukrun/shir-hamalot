@@ -8,11 +8,8 @@ import Todot from "./Todot";
 import PageTitle from "./PageTitle";
 import Bad from "./Bad";
 import Brahot from "./Brahot";
-import Chida from "./Chida";
 import Magic from "./Magic";
-import Tifzoret from "./Tifzoret";
 import Sipor from "./Sipor";
-import Parasha from "./Parasha";
 import OtherLines from "./OtherLines";
 
 const BodyContainer = styled.div`
@@ -20,30 +17,28 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    590px //20
-    200px //30
-    470px //35
-    250px //40
+    1090px //20
+    400px //30
+    185px //40
     120px //50
-    310px //60
-    390px //70
-    200px //80
-    120px //80
-    230px //90
-    340px; //100
-  grid-template-columns: 600px 600px;
+    465px //60
+    275px //70
+    230px //80
+    275px //90
+    135px //100
+    340px; //110
+  grid-template-columns: 650px 650px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "   Chida Beher     " //30
-    "   Hizok Gmara     " //35
-    "   Hidod  Sipor     " //40
+    "   Hizok Gmara     " //30
+    "   Beher  Beher   " //40
     "PageTitle  PageTitle " //50
-    "        Brahot   Bad    " //60
-    "        Brahot  Mahane     " //70
-    "       Brahot  Yahe  " //80
-    "       Brahot  Briha  " //85
-    "  Parasha Magic     " //90
-    " Todot Todot   "; //100
+    "        Brahot    Mahane     " //60
+    "        Brahot   Tora    " //70
+    "    Sipor     Yahe  " //80
+    "   Magic   Bad    " //90
+    "   Briha  Bad   " //100
+    " Todot Todot   "; //110
   font-family: "Bona Nova", serif;
   row-gap: 8px;
   column-gap: 8px;
@@ -60,16 +55,14 @@ const Haparasha = () => {
       <Mahane />
       <Bad />
       <Brahot />
-      <Chida />
       <Magic />
       <Todot />
       <Sipor />
-      <Parasha />
       <OtherLines gridArea="Briha" num={1} listStyle="none" />
       <OtherLines gridArea="Gmara" num={2} listStyle="none" />
       <OtherLines gridArea="Hizok" num={3} listStyle="none" />
       <OtherLines gridArea="Beher" num={4} listStyle="none" />
-      <OtherLines gridArea="Hidod" num={5} listStyle="none" />
+      <OtherLines gridArea="Tora" num={5} listStyle="none" />
     </BodyContainer>
   );
 };
