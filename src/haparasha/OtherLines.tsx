@@ -8,9 +8,11 @@ const OtherBox = styled(BasicBox)`
   position: relative;
 `;
 
-const TextDiv = styled.div`
+const TextDiv = styled.div<{
+  padding: number;
+}>`
   ${RegularText}
-  padding: 8px;
+  padding: ${({ padding }) => `${padding}px`};
 `;
 
 const OL = styled.ol`
@@ -30,7 +32,8 @@ const OtherLines: React.FC<{
   num: number;
   gridArea: string;
   listStyle: string;
-}> = ({ num, gridArea, listStyle }) => {
+  padding?: number;
+}> = ({ num, gridArea, listStyle, padding = 8 }) => {
   // @ts-ignore
   const title = l10n.other?.["title" + num];
   // @ts-ignore
@@ -49,7 +52,7 @@ const OtherLines: React.FC<{
         {lines.map((line: string) => {
           return (
             <li key={faker.datatype.uuid()}>
-              <TextDiv>{line}</TextDiv>
+              <TextDiv padding={padding}>{line}</TextDiv>
             </li>
           );
         })}
