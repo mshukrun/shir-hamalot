@@ -33,7 +33,7 @@ const PageImage: React.FC<{ gridArea: string }> = ({ gridArea }) => {
         <TitleDiv>{l10n.title.paint}</TitleDiv>
       </TitleBox>
       <ImageContainer>
-        <ImageBox src={require("./images/p_image.png")} alt="" />
+        <ImageBox src={require("./images/p_image.JPG")} alt="" />
       </ImageContainer>
     </OtherBox>
   );
