@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BasicBox, TitleDiv } from "../Common";
+import { BasicBox, SubtitleDiv, TitleDiv } from "../Common";
 import l10n from "./l10n.json";
 
 const OtherBox = styled(BasicBox)`
@@ -30,7 +30,7 @@ const PageImage: React.FC<{ gridArea: string }> = ({ gridArea }) => {
   return (
     <OtherBox dir="RTL" style={{ gridArea: gridArea }}>
       <TitleBox>
-        <TitleDiv>{l10n.title.paint}</TitleDiv>
+        <SubtitleDiv>{l10n.title.paint}</SubtitleDiv>
       </TitleBox>
       <ImageContainer>
         <ImageBox src={require("./images/p_image.JPG")} alt="" />

@@ -19,27 +19,25 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    810px //20
+    700px //20
     470px //30
-    265px //30
+    350px //30
     120px //50
     400px //60
     200px //70
-    200px //75
-    280px //80
-    230px //90
-    360px; //110
+    260px //80
+    320px //90
+    400px; //110
   grid-template-columns: 600px 600px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
     "   Hizok Gmara     " //30
-    "   Bad  Tora      " //40
+    "   Bad  Parasha      " //40
     "PageTitle  PageTitle " //50
     "        Brahot    Mahane     " //60
     "        Brahot   Chida    " //70
-    "        Brahot   Beer    " //75
-    "    Parasha      Paint  " //80
-    "   Magic    Yahe   " //90
+    "        Brahot   Magic    " //80
+    "   Paint    Yahe   " //90
     " Todot Todot   "; //110
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -64,8 +62,6 @@ const Haparasha = () => {
 
       <OtherLines gridArea="Gmara" num={2} listStyle="none" />
       <OtherLines gridArea="Hizok" num={3} listStyle="none" />
-      <OtherLines gridArea="Beer" num={4} listStyle="none" />
-      <OtherLines gridArea="Tora" num={5} listStyle="none" />
       <PageImage gridArea="Paint" />
     </BodyContainer>
   );
