@@ -19,24 +19,22 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    700px //20
-    470px //30
-    350px //30
+    1100px //20
+    430px //30
     120px //50
     400px //60
     200px //70
     260px //80
     320px //90
-    400px; //110
+    350px; //110
   grid-template-columns: 600px 600px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "   Hizok Gmara     " //30
-    "   Bad  Parasha      " //40
+    "   Hizok    Bad  " //30
     "PageTitle  PageTitle " //50
-    "        Brahot    Mahane     " //60
-    "        Brahot   Chida    " //70
-    "        Brahot   Magic    " //80
+    "        Gmara    Mahane     " //60
+    "        Gmara   Chida    " //70
+    "        Parasha   Magic    " //80
     "   Paint    Yahe   " //90
     " Todot Todot   "; //110
   font-family: "Bona Nova", serif;
@@ -54,7 +52,6 @@ const Haparasha = () => {
       <Yahe />
       <Mahane />
       <Bad />
-      <Brahot />
       <Magic />
       <Todot />
       <Chida />
