@@ -17,7 +17,7 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1090px //20
+    1520px //20
     400px //30
     185px //40
     120px //50
