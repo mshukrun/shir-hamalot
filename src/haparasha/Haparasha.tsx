@@ -18,23 +18,25 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1050px //20
-    350px //30
+    850px //20
+    330px //30
+    210px //40
     120px //50
-    400px //60
-    250px //80
-    220px //90
+    360px //60
+    370px //70
+    180px //80
     250px //100
-    300px; //110
+    320px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "        Hizok  Paint      " //30
+    "   Bad        Paint      " //30
+    "   Yahe    Chida   " //40
     "PageTitle  PageTitle " //50
-    "    Gmara        Mahane     " //60
-    "   Yahe   Parasha     " //80
-    "     Bad  Chida   " //90
-    "   Tora   Magic    " //100
+    "   Gmara         Mahane     " //60
+    "   Gmara       Hizok       " //70
+    "   Tora         Tora     " //80
+    "   Parasha   Magic    " //100
     " Todot Todot   "; //110
   font-family: "Bona Nova", serif;
   row-gap: 8px;
