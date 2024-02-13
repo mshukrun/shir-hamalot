@@ -11,27 +11,30 @@ import OtherLines from "./OtherLines";
 import Chida from "./Chida";
 import Parasha from "./Parasha";
 import PageImage from "./PageImage";
+import Magic from "./Magic";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1270px //20
-    260px //30
+    1050px //20
+    350px //30
     120px //50
-    470px //60
-    400px //80
-    320px //90
-    350px; //110
-  grid-template-columns: 600px 600px;
+    400px //60
+    250px //80
+    220px //90
+    250px //100
+    300px; //110
+  grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "   Yahe  Chida    " //30
+    "        Hizok  Paint      " //30
     "PageTitle  PageTitle " //50
-    "      Bad      Mahane     " //60
-    "        Hizok  Gmara     " //80
-    "   Paint   Parasha    " //90
+    "    Gmara        Mahane     " //60
+    "   Yahe   Parasha     " //80
+    "     Bad  Chida   " //90
+    "   Tora   Magic    " //100
     " Todot Todot   "; //110
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -51,9 +54,10 @@ const Haparasha = () => {
       <Todot />
       <Chida />
       <Parasha />
-
+      <Magic />
       <OtherLines gridArea="Gmara" num={2} listStyle="none" />
       <OtherLines gridArea="Hizok" num={3} listStyle="none" />
+      <OtherLines gridArea="Tora" num={5} listStyle="none" />
       <PageImage gridArea="Paint" />
     </BodyContainer>
   );
