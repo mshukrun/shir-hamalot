@@ -11,6 +11,7 @@ const OtherBox = styled(BasicBox)`
 const TextDiv = styled.div`
   ${RegularText}
   padding: 4px 8px;
+  white-space: normal;
 `;
 
 const OL = styled.ol`
@@ -30,13 +31,15 @@ const OtherSong: React.FC<{
   num: number;
   gridArea: string;
   listStyle: string;
-}> = ({ num, gridArea, listStyle }) => {
+  height: string;
+  blockWidth: string;
+}> = ({ num, gridArea, listStyle, height, blockWidth }) => {
   // @ts-ignore
   const title = l10n.other?.["title" + num];
   // @ts-ignore
   const subtitle = l10n.other?.["subtitle" + num];
   // @ts-ignore
-  const lines = l10n.other?.["content" + num].split("|");
+  const blocks = l10n.other?.["content" + num].split("||");
   // @ts-ignore
   const credit = l10n.other?.["credit" + num];
 
@@ -44,15 +47,29 @@ const OtherSong: React.FC<{
     <OtherBox dir="RTL" style={{ gridArea: gridArea }}>
       <TitleDiv>{title}</TitleDiv>
       {subtitle && <SubtitleDiv>{subtitle}</SubtitleDiv>}
-      <OL style={{ listStyle: listStyle }}>
-        {lines.map((line: string) => {
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "column",
+          height: height,
+          flexWrap: "wrap",
+          gap: "10px",
+        }}
+      >
+        {blocks.map((block: string, index: number) => {
           return (
-            <li key={faker.datatype.uuid()}>
-              <TextDiv>{line}</TextDiv>
-            </li>
+            <OL key={index} style={{ listStyle: listStyle }}>
+              {block.split("|").map((line: string) => {
+                return (
+                  <li key={faker.datatype.uuid()}>
+                    <TextDiv style={{ width: blockWidth }}>{line}</TextDiv>
+                  </li>
+                );
+              })}
+            </OL>
           );
         })}
-      </OL>
+      </div>
       {credit && <CreditDiv>{credit}</CreditDiv>}
     </OtherBox>
   );
