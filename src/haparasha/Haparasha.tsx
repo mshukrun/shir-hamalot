@@ -11,32 +11,31 @@ import OtherLines from "./OtherLines";
 import Chida from "./Chida";
 import Parasha from "./Parasha";
 import Magic from "./Magic";
-import Tifzoret from "./Tifzoret";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    990px //20
-    410px //30
+    850px //20
+    350px //30
+    170px //40
     120px //50
-    350px //60
-    175px //70
+    200px //60
+    250px //70
     250px //80
-    230px //90
-    220px //100
-    270px; //110
+    350px //90
+    350px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "        Hizok  Mahane       " //30
+    "        Hizok     Mahane    " //30
+    "        Hizok     Parasha    " //40
     "PageTitle  PageTitle " //50
-    "   Bad     Tifzoret         " //60
-    "   Bad     Chida         " //70
-    "   Yahe   Parasha     " //80
+    "   Bad     Chida         " //60
+    "   Bad     Yahe         " //70
+    "   Bad     Magic   " //80
     "      Gmara Tora   " //90
-    "   Gmara   Magic    " //100
     " Todot Todot   "; //110
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -57,7 +56,6 @@ const Haparasha = () => {
       <Chida />
       <Parasha />
       <Magic />
-      <Tifzoret table={{ left: 90 }} words={{ top: 210, height: 100 }} />
       <OtherLines gridArea="Gmara" num={2} listStyle="none" />
       <OtherLines gridArea="Hizok" num={3} listStyle="none" />
       <OtherLines gridArea="Tora" num={5} listStyle="none" />
