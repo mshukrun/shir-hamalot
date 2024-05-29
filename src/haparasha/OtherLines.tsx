@@ -39,7 +39,6 @@ const OtherLines: React.FC<{
   const lines = l10n.other?.["content" + num].split("|");
   // @ts-ignore
   const credit = l10n.other?.["credit" + num];
-  console.log({ credit });
 
   return (
     <OtherBox dir="RTL" style={{ gridArea: gridArea }}>
