@@ -13,9 +13,26 @@ const TextDiv = styled.div`
   padding: 4px 8px;
 `;
 
-const OL = styled.ol`
-  ${RegularText}
-  padding: 0 8px;
+const OL = styled.div<{
+  width?: number;
+  height?: number;
+  top?: number;
+}>`
+  position: relative;
+  font-weight: 400;
+  font-family: "David Libre", serif;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 10px 40px;
+  margin-top: ${({ top }) => top || 0}px;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  height: ${({ height }) => height || 350}px;
+  width: ${({ width }) => width || 1100}px;
+  white-space: normal;
+  column-gap: 30px;
 `;
 
 const CreditDiv = styled.div`
