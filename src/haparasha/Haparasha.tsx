@@ -18,15 +18,15 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 250px //10
-    800px //20
+    940px //20
     540px //30
     120px //50
-    400px //60
+    450px //60
     290px //80
     200px //90
     250px //100
-    300px; //110
-  grid-template-columns: 550px 550px;
+    350px; //110
+  grid-template-columns: 600px 600px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
     "        Hizok  Gmara      " //30
@@ -53,10 +53,12 @@ const Haparasha = () => {
       <Bad />
       <Todot />
       <Parasha />
-      <Tifzoret table={{ left: 95, top: 70 }} words={{ top: 250 }} />
+      <Tifzoret
+        table={{ left: 25, top: 70 }}
+        words={{ top: 20, width: 260, height: 350 }}
+      />
       <Chida />
-
-      <OtherTable gridArea="Gmara" num={2} />
+      <OtherLines gridArea="Gmara" num={2} listStyle="none" />
       <OtherLines gridArea="Hizok" num={3} listStyle="none" />
       <OtherLines gridArea="Tora" num={5} listStyle="none" />
     </BodyContainer>
