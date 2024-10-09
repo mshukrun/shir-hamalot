@@ -16,7 +16,7 @@ const SubtitleDiv = styled.div`
 
 const TextDiv = styled.div`
   ${RegularPlusText}
-  padding: 8px 30px 10px;
+  padding: 4px 10px 4px;
 `;
 
 // const TextIconsDiv = styled.div`
@@ -51,13 +51,26 @@ const GoodShabesDiv = styled.div`
   text-decoration: underline;
 `;
 
-// const CreditDiv = styled.div`
-//   position: absolute;
-//   ${RegularText}
-//   bottom: 12px;
-//   right: 35px;
-//   text-decoration: underline;
-// `;
+const OL = styled.div<{
+  width?: number;
+  height?: number;
+  top?: number;
+}>`
+  position: relative;
+  font-weight: 400;
+  font-family: "David Libre", serif;
+  font-size: 22px;
+  line-height: 30px;
+  padding: 10px 10px;
+  margin-top: ${({ top }) => top || 280}px;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  height: ${({ height }) => height || 120}px;
+  width: ${({ width }) => width || 600}px;
+  white-space: normal;
+`;
 
 const Vort = () => {
   const texts = l10n.vort.text.split("|");
@@ -65,9 +78,12 @@ const Vort = () => {
     <VortBox dir="RTL">
       <TitleDiv>{l10n.vort.title}</TitleDiv>
       <SubtitleDiv>{l10n.vort.subtitle}</SubtitleDiv>
-      {texts.map((text) => (
-        <TextDiv key={faker.datatype.uuid()}>{text}</TextDiv>
-      ))}
+      <OL width={1300} height={1300} top={-10}>
+        {texts.map((text) => (
+          <TextDiv key={faker.datatype.uuid()}>{text}</TextDiv>
+        ))}
+      </OL>
+
       <GoodShabesDiv>{l10n.vort.goodShabes}</GoodShabesDiv>
       {/* <CreditDiv>{l10n.vort.credit}</CreditDiv> */}
     </VortBox>

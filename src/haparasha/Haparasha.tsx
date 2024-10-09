@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Mahane from "./Mahane";
 import Title from "./Title";
 import Vort from "./Vort";
 import Yahe from "./Yahe";
@@ -11,30 +10,28 @@ import OtherLines from "./OtherLines";
 import Chida from "./Chida";
 import Parasha from "./Parasha";
 import Tifzoret from "./Tifzoret";
-import OtherTable from "./OtherTable";
+import Magic from "./Magic";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
-  grid-template-rows: 250px //10
-    800px //20
-    540px //30
+  grid-template-rows: 220px //10
+    1400px //20
+    260px //30
     120px //50
-    400px //60
-    290px //80
-    200px //90
-    250px //100
-    300px; //110
-  grid-template-columns: 550px 550px;
+    330px //60
+    590px //80
+    400px //100
+    350px; //110
+  grid-template-columns: 650px 650px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "        Hizok  Gmara      " //30
+    "     Yahe    Chida       " //30
     "PageTitle  PageTitle " //50
-    "  Bad          Mahane     " //60
-    "  Parasha    Tora    " //80
-    "     Chida   Tifzoret  " //90
-    "   Yahe   Tifzoret     " //100
+    "  Bad          Tora     " //60
+    "  Parasha    Tifzoret    " //80
+    "   Hizok   Magic     " //100
     " Todot Todot   "; //110
   font-family: "Bona Nova", serif;
   row-gap: 8px;
@@ -49,14 +46,15 @@ const Haparasha = () => {
       <PageTitle />
       <Vort />
       <Yahe />
-      <Mahane />
       <Bad />
       <Todot />
       <Parasha />
-      <Tifzoret table={{ left: 95, top: 70 }} words={{ top: 250 }} />
+      <Tifzoret
+        table={{ left: 95, top: 70 }}
+        words={{ top: 370, height: 150, width: 700 }}
+      />
       <Chida />
-
-      <OtherTable gridArea="Gmara" num={2} />
+      <Magic />
       <OtherLines gridArea="Hizok" num={3} listStyle="none" />
       <OtherLines gridArea="Tora" num={5} listStyle="none" />
     </BodyContainer>
