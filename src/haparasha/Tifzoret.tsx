@@ -49,6 +49,7 @@ const TableDiv = styled.div<{
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  margin: 0 10px;
   top: ${({ top }) => top || 80}px;
   left: ${({ left }) => left || 180}px;
   border-bottom: 1px solid black;
