@@ -74,12 +74,13 @@ export const DavidRegularText = css`
 `;
 
 export const BasicBox = styled.div`
-  border: 1px solid black;
-  border-radius: 8px;
+  border: 6px solid #172c51;
+  border-radius: 32px;
   display: flex;
   position: relative;
   flex-flow: column;
   justify-content: flex-start;
+  height: 100%;
 `;
 
 export const TitleDiv = styled.div`

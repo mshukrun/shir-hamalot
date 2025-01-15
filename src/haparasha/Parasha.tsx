@@ -1,19 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { faker } from "@faker-js/faker";
-import { BasicBox, RegularText, MediumText, TitleDiv } from "../Common";
+import { RegularText, MediumText } from "../Common";
 import l10n from "./l10n.json";
-
-const ParashaBox = styled(BasicBox)`
-  grid-area: Parasha;
-  position: relative;
-`;
+import CommonFrame from "../CommonFrame";
 
 const OL = styled.ol`
   ${RegularText}
   text-align: right;
   list-style: none;
-  padding: 5px 20px 10px;
+  padding: 5px 40px 10px;
 `;
 
 const LI = styled.li`
@@ -36,22 +32,19 @@ const LetterDiv = styled.div`
 const Parasha = () => {
   const questions = l10n.parasha.content.split("||");
   return (
-    <ParashaBox dir="RTL">
-      <TitleDiv>{l10n.parasha.title}</TitleDiv>
-      <div>
-        <OL>
-          {questions.map((question) => {
-            const parts = question.split("|");
-            return (
-              <LI key={faker.datatype.uuid()}>
-                <LetterDiv>{parts[0]}</LetterDiv>
-                <TextDiv>{parts[1]}</TextDiv>
-              </LI>
-            );
-          })}
-        </OL>
-      </div>
-    </ParashaBox>
+    <CommonFrame gridArea="Parasha" title={l10n.parasha.title} content={""}>
+      <OL>
+        {questions.map((question) => {
+          const parts = question.split("|");
+          return (
+            <LI key={faker.datatype.uuid()}>
+              <LetterDiv>{parts[0]}</LetterDiv>
+              <TextDiv>{parts[1]}</TextDiv>
+            </LI>
+          );
+        })}
+      </OL>
+    </CommonFrame>
   );
 };
 

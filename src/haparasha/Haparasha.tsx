@@ -4,37 +4,43 @@ import Mahane from "./Mahane";
 import Title from "./Title";
 import Vort from "./Vort";
 import Yahe from "./Yahe";
-import Todot from "./Todot";
 import PageTitle from "./PageTitle";
 import Bad from "./Bad";
 import OtherLines from "./OtherLines";
 import Chida from "./Chida";
 import Parasha from "./Parasha";
 import Magic from "./Magic";
+import Pitaron from "./Pitaron";
+import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
+import l10n from "./l10n.json";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
-  grid-template-rows: 250px //10
-    1130px //20
-    220px //30
+  grid-template-rows: 220px //10
+    920px //20
+    450px //30
     120px //50
-    400px //60
+    280px //60
     220px //80
-    250px //80
+    220px //80
     200px //90
-    340px; //110
+    220px //95
+    280px //100
+    50px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "   Parasha   Chida          " //30
+    "  Hizok   Mahane           " //30
     "PageTitle  PageTitle " //50
-    "  Bad          Mahane     " //60
-    "  Hizok  Magic      " //80
-    "  Hizok  Yahe      " //80
+    "  Bad       Yahe        " //60
+    "  Parasha  Magic      " //80
+    "  BilBol  Chida      " //80
     "     Tora  Tora   " //90
-    " Todot Todot   "; //110
+    "     FW  RIP   " //95
+    " Pitaron Pitaron   " // 100
+    " Contact Contact "; //110
   font-family: "Bona Nova", serif;
   row-gap: 8px;
   column-gap: 8px;
@@ -46,17 +52,31 @@ const Haparasha = () => {
     <BodyContainer>
       <Title />
       <PageTitle />
+      <Pitaron />
       <Vort />
       <Yahe />
       <Mahane />
       <Bad />
-      <Todot />
+
       <Parasha />
       <Chida />
       <Magic />
 
-      <OtherLines gridArea="Hizok" num={3} listStyle="none" />
-      <OtherLines gridArea="Tora" num={5} listStyle="none" />
+      <OtherLines gridArea="Hizok" num={3} />
+      <OtherLines gridArea="Tora" num={5} />
+      <OtherLines gridArea="BilBol" num={4} isCenter={true} />
+      <CommonFrameWithoutTitle gridArea="Contact" content={l10n.contact} />
+      <CommonFrameWithoutTitle
+        gridArea="RIP"
+        content={l10n.rip}
+        fontSize={20}
+      />
+      <CommonFrameWithoutTitle
+        gridArea="FW"
+        content={l10n.fw}
+        fontSize={30}
+        gniza={true}
+      />
     </BodyContainer>
   );
 };

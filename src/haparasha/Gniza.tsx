@@ -25,20 +25,21 @@ const TagBox = styled.div<{
     css`
       left: ${l};
     `};
-  width: 400px;
+  width: 190px;
 `;
 
 const Tag = styled.div`
   -webkit-print-color-adjust: exact;
-  font-weight: 800;
-  font-family: "David Libre", serif;
-  font-size: 50px;
-  line-height: 54px;
-  background-color: #242020;
-  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 27px;
+  background-color: #fff;
+  color: #242020;
+  border: 1px solid #242020;
   border-radius: 24px;
   white-space: nowrap;
   text-align: center;
+  transform: rotate(-90deg);
 `;
 
 const Gniza: React.FC<{

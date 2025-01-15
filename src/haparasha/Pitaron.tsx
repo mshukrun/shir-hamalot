@@ -1,75 +1,42 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { faker } from "@faker-js/faker";
-import { BasicBox, SmallText, TinyText, TitleDiv } from "../Common";
+import React, { Fragment } from "react";
 import l10n from "./l10n.json";
+import CommonFrame from "../CommonFrame";
+import styled from "styled-components";
+import { SmallText } from "../Common";
 
-const PitaromBox = styled(BasicBox)<{
-  b?: string;
-  t?: string;
-  l?: string;
-  r?: string;
-  w?: string;
-}>`
-  position: absolute;
-  ${({ t }) =>
-    css`
-      top: ${t};
-    `};
-  ${({ b }) =>
-    css`
-      bottom: ${b};
-    `};
-  ${({ r }) =>
-    css`
-      right: ${r};
-    `};
-  ${({ l }) =>
-    css`
-      left: ${l};
-    `};
-  width: ${({ w }) => w || "50%"};
+const TextBox = styled.div`
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  padding: 4px 30px 4px;
+  gap: 4px;
 `;
 
-const PTitle = styled(TitleDiv)`
+const TextDiv = styled.span`
   ${SmallText}
-  margin: 4px auto 0;
 `;
 
-const OL = styled.ol`
-  ${TinyText}
-  list-style-type: disc;
-  padding: 4px 25px 4px 10px;
-  transform: rotate(-180deg);
-  font-size: 10px;
-  line-height: 12px;
+const TitleDiv = styled(TextDiv)`
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: 80px;
 `;
 
-const TextDiv = styled.div`
-  ${TinyText}
-`;
-
-const Pitaron: React.FC<{
-  b?: string;
-  t?: string;
-  l?: string;
-  r?: string;
-  w?: string;
-}> = ({ w, t, l, b, r }) => {
-  const lines = l10n.pitaron.content.split("|");
+const Pitaron: React.FC = () => {
+  const texts = l10n.pitaron.content.split("|");
   return (
-    <PitaromBox dir="RTL" w={w} t={t} l={l} b={b} r={r}>
-      <PTitle>{l10n.pitaron.title}</PTitle>
-      <OL>
-        {lines.map((line) => {
-          return (
-            <li key={faker.datatype.uuid()}>
-              <TextDiv>{line}</TextDiv>
-            </li>
-          );
-        })}
-      </OL>
-    </PitaromBox>
+    <CommonFrame gridArea="Pitaron" title={l10n.pitaron.title} content="">
+      {texts.map((text, index) => {
+        const segemnts = text.split(":");
+        return (
+          <TextBox key={`text_${index}`}>
+            <TitleDiv>{`${segemnts[0]}:`}</TitleDiv>
+            <TextDiv>{segemnts[1]}</TextDiv>
+          </TextBox>
+        );
+      })}
+    </CommonFrame>
   );
 };
 

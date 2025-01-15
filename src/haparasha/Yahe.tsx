@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { faker } from "@faker-js/faker";
-import { BasicBox, RegularText, TitleDiv } from "../Common";
+import { RegularText } from "../Common";
 import l10n from "./l10n.json";
-
-const YaheBox = styled(BasicBox)`
-  grid-area: Yahe;
-  position: relative;
-`;
+import CommonFrame from "../CommonFrame";
 
 const OL = styled.ol`
   ${RegularText}
@@ -16,7 +11,11 @@ const OL = styled.ol`
 
 const TextDiv = styled.div`
   ${RegularText}
-  text-align: right;
+  padding: 2px 0;
+`;
+
+const FirstTextDiv = styled(TextDiv)`
+  padding-left: 90px;
 `;
 
 const CreditDiv = styled.div`
@@ -30,17 +29,20 @@ const CreditDiv = styled.div`
 const Yahe = () => {
   const texts = l10n.yahe.content.split("|");
   return (
-    <YaheBox dir="RTL">
-      <TitleDiv>{l10n.yahe.title}</TitleDiv>
+    <CommonFrame gridArea="Yahe" title={l10n.yahe.title} content="">
       <OL>
-        {texts.map((text) => (
-          <li key={faker.datatype.uuid()}>
-            <TextDiv>{text}</TextDiv>
+        {texts.map((text, index) => (
+          <li key={`text_${index}`}>
+            {index === 0 ? (
+              <FirstTextDiv>{text}</FirstTextDiv>
+            ) : (
+              <TextDiv>{text}</TextDiv>
+            )}
           </li>
         ))}
       </OL>
       <CreditDiv>{l10n.yahe.credit}</CreditDiv>
-    </YaheBox>
+    </CommonFrame>
   );
 };
 

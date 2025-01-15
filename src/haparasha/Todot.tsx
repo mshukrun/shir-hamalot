@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { BasicBox, RegularText, TitleDiv } from "../Common";
 import Gniza from "./Gniza";
 import l10n from "./l10n.json";
-import Pitaron from "./Pitaron";
 
 const TodotBox = styled(BasicBox)`
   grid-area: Todot;
@@ -62,7 +61,6 @@ const Todot = () => {
         )}
       </OL>
       <Gniza r="20px" b="20px" />
-      <Pitaron l="10px" b="5px" w="56%" />
     </TodotBox>
   );
 };

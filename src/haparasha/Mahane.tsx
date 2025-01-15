@@ -1,14 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { faker } from "@faker-js/faker";
-import { BasicBox, RegularPlusText, RegularText } from "../Common";
-import ComplexTitle from "../ComplexTitle";
+import { RegularPlusText, RegularText } from "../Common";
 import l10n from "./l10n.json";
-
-const MahaneBox = styled(BasicBox)`
-  grid-area: Mahane;
-  position: relative;
-`;
+import CommonFrame from "../CommonFrame";
 
 const OL = styled.ol`
   ${RegularPlusText}
@@ -17,16 +12,21 @@ const OL = styled.ol`
 
 const OLInner = styled.ol`
   ${RegularPlusText}
-  text-align: right;
-  padding-right: 20px;
+  padding-right: 30px;
   list-style: hebrew;
 `;
 
 const TextDiv = styled.div`
   ${RegularPlusText}
-  top: 58px;
-  right: 16px;
-  text-align: right;
+  padding: 2px 0;
+`;
+
+const BoldTextDiv = styled(TextDiv)`
+  font-weight: 700;
+`;
+
+const Subtitle = styled(BoldTextDiv)`
+  padding: 10px 40px 10px;
 `;
 
 const CreditDiv = styled.div`
@@ -40,14 +40,14 @@ const CreditDiv = styled.div`
 const Mahane = () => {
   const questions = l10n.mahane.content.split("||");
   return (
-    <MahaneBox dir="RTL">
-      <ComplexTitle title={l10n.mahane.title} subtitle={l10n.mahane.subtitle} />
+    <CommonFrame gridArea="Mahane" title={l10n.mahane.title} content="">
+      <Subtitle>{l10n.mahane.subtitle}</Subtitle>
       <OL>
         {questions.map((question) => {
           const answers = question.split("|");
           return (
             <li key={faker.datatype.uuid()}>
-              <TextDiv>{answers[0]}</TextDiv>
+              <BoldTextDiv>{answers[0]}</BoldTextDiv>
               <OLInner>
                 {answers.slice(1).map((answer) => (
                   <li key={faker.datatype.uuid()}>
@@ -60,7 +60,7 @@ const Mahane = () => {
         })}
       </OL>
       <CreditDiv>{l10n.mahane.credit}</CreditDiv>
-    </MahaneBox>
+    </CommonFrame>
   );
 };
 
