@@ -19,26 +19,26 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    920px //20
-    450px //30
+    830px //20
+    540px //30
     120px //50
-    280px //60
+    260px //60
     220px //80
     220px //80
-    200px //90
-    220px //95
-    280px //100
+    270px //90
+    210px //95
+    250px //100
     50px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "  Hizok   Mahane           " //30
+    " Bad    Mahane " //30
     "PageTitle  PageTitle " //50
-    "  Bad       Yahe        " //60
-    "  Parasha  Magic      " //80
-    "  BilBol  Chida      " //80
-    "     Tora  Tora   " //90
-    "     FW  RIP   " //95
+    " Parasha Tora " //60
+    " Yahe Magic " //80
+    "  BilBol  Chida " //80
+    " Hizok  Hizok   " //90
+    " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
   font-family: "Bona Nova", serif;

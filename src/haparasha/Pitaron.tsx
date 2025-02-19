@@ -23,6 +23,13 @@ const TitleDiv = styled(TextDiv)`
   min-width: 80px;
 `;
 
+const RashiText = styled(TextDiv)`
+  font-family: "Noto Rashi Hebrew", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+`;
+
 const Pitaron: React.FC = () => {
   const texts = l10n.pitaron.content.split("|");
   return (
@@ -32,7 +39,7 @@ const Pitaron: React.FC = () => {
         return (
           <TextBox key={`text_${index}`}>
             <TitleDiv>{`${segemnts[0]}:`}</TitleDiv>
-            <TextDiv>{segemnts[1]}</TextDiv>
+            <RashiText>{segemnts[1]}</RashiText>
           </TextBox>
         );
       })}
