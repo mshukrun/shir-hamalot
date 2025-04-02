@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { BasicBox, TitleDiv } from "../Common";
 import l10n from "./l10n.json";
-
-const TifzoretBox = styled(BasicBox)`
-  grid-area: Tifzoret;
-  position: relative;
-`;
+import CommonFrame from "../CommonFrame";
 
 const OL = styled.div<{
   width?: number;
@@ -19,13 +14,14 @@ const OL = styled.div<{
   font-size: 24px;
   line-height: 30px;
   padding: 10px 40px;
-  margin-top: ${({ top }) => top || 280}px;
+  margin-top: ${({ top }) => top || 20}px;
   list-style-type: none;
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  height: ${({ height }) => height || 120}px;
-  width: ${({ width }) => width || 600}px;
+  height: ${({ height }) => height || 300}px;
+  width: ${({ width }) => width || 200}px;
+  right: 320px;
   white-space: normal;
 `;
 
@@ -49,8 +45,8 @@ const TableDiv = styled.div<{
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  top: ${({ top }) => top || 80}px;
-  left: ${({ left }) => left || 180}px;
+  top: ${({ top }) => top || 60}px;
+  left: ${({ left }) => left || 200}px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {
@@ -72,8 +68,7 @@ const Tifzoret: React.FC<{
   const shoraArr: string[] = shorot.split("|");
 
   return (
-    <TifzoretBox dir="RTL">
-      <TitleDiv>{l10n.tifzoret.title}</TitleDiv>
+    <CommonFrame gridArea="Tifzoret" title={l10n.tifzoret.title} content={""}>
       <OL width={words?.width} height={words?.height} top={words?.top}>
         {milaArr.map((mila) => {
           return <TextDiv>{mila}</TextDiv>;
@@ -98,7 +93,7 @@ const Tifzoret: React.FC<{
           </tbody>
         </table>
       </TableDiv>
-    </TifzoretBox>
+    </CommonFrame>
   );
 };
 

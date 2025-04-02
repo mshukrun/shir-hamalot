@@ -13,6 +13,7 @@ import Magic from "./Magic";
 import Pitaron from "./Pitaron";
 import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
 import l10n from "./l10n.json";
+import Tifzoret from "./Tifzoret";
 
 const BodyContainer = styled.div`
   display: grid;
@@ -20,14 +21,14 @@ const BodyContainer = styled.div`
   width: 1200px;
   grid-template-rows: 220px //10
     830px //20
-    540px //30
+    550px //30
     120px //50
-    260px //60
-    220px //80
-    220px //80
+    300px //60
+    250px //80
+    200px //80
     270px //90
     210px //95
-    250px //100
+    200px //100
     50px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
@@ -35,8 +36,8 @@ const BodyContainer = styled.div`
     " Bad    Mahane " //30
     "PageTitle  PageTitle " //50
     " Parasha Tora " //60
-    " Yahe Magic " //80
-    "  BilBol  Chida " //80
+    " Yahe Tifzoret " //80
+    "  Chida  Tifzoret " //80
     " Hizok  Hizok   " //90
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
@@ -60,11 +61,10 @@ const Haparasha = () => {
 
       <Parasha />
       <Chida />
-      <Magic />
+      <Tifzoret />
 
       <OtherLines gridArea="Hizok" num={3} />
       <OtherLines gridArea="Tora" num={5} />
-      <OtherLines gridArea="BilBol" num={4} isCenter={true} />
       <CommonFrameWithoutTitle gridArea="Contact" content={l10n.contact} />
       <CommonFrameWithoutTitle
         gridArea="RIP"
