@@ -9,7 +9,6 @@ import Bad from "./Bad";
 import OtherLines from "./OtherLines";
 import Chida from "./Chida";
 import Parasha from "./Parasha";
-import Magic from "./Magic";
 import Pitaron from "./Pitaron";
 import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
 import l10n from "./l10n.json";
@@ -20,24 +19,26 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    830px //20
-    550px //30
+    680px //20
+    500px //30
+    200px //30
     120px //50
     300px //60
-    250px //80
+    230px //80
     200px //80
-    270px //90
+    300px //90
     210px //95
     200px //100
     50px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    " Bad    Mahane " //30
+    " Bad  Mahane   " //30
+    " Bad  Chida   " //30
     "PageTitle  PageTitle " //50
-    " Parasha Tora " //60
-    " Yahe Tifzoret " //80
-    "  Chida  Tifzoret " //80
+    " Yahe Tora " //60
+    " Parasha Tifzoret " //80
+    "  Parasha  Tifzoret " //80
     " Hizok  Hizok   " //90
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
