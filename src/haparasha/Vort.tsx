@@ -17,6 +17,7 @@ const Vort = () => {
     <CommonFrame
       gridArea="Vort"
       title={l10n.vort.title}
+      subtitle={l10n.vort.subtitle}
       content={l10n.vort.text}
     >
       <GoodShabesDiv>{l10n.vort.goodShabes}</GoodShabesDiv>
