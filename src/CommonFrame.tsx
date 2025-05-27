@@ -12,9 +12,11 @@ const FrameBox = styled.div`
   justify-content: flex-start;
 `;
 
-const InnerFrameBox = styled(BasicBox)`
+const InnerFrameBox = styled(BasicBox)<{
+  isCenter: boolean;
+}>`
   position: relative;
-  padding-top: 10px;
+  padding-top: ${({ isCenter }) => (isCenter ? 40 : 10)}px;
 `;
 
 const TitleDiv = styled.div`
@@ -49,12 +51,11 @@ const TextDiv = styled.div<{
 
 const CenterTextDiv = styled.div`
   ${RegularPlusText}
-  height: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 32px;
+  padding: 4px 0;
 `;
 
 interface CommonFrameProps {
@@ -77,7 +78,7 @@ const CommonFrame: React.FC<CommonFrameProps> = ({
   const texts = content.split("|");
   return (
     <FrameBox style={{ gridArea: gridArea }} dir="RTL">
-      <InnerFrameBox>
+      <InnerFrameBox isCenter={isCenter}>
         {subtitle && <SubtitleDiv>{subtitle}</SubtitleDiv>}
         {texts.map((text, index) =>
           isCenter ? (
