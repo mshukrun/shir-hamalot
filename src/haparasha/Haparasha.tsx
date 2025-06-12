@@ -12,6 +12,7 @@ import Pitaron from "./Pitaron";
 import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
 import l10n from "./l10n.json";
 import Vort from "./Vort";
+import Magic from "./Magic";
 
 const BodyContainer = styled.div`
   display: grid;
@@ -22,8 +23,8 @@ const BodyContainer = styled.div`
     500px //30
     120px //50
     300px //60
-    300px //80
-    300px //90
+    380px //80
+    250px //90
     210px //95
     250px //100
     50px; //110
@@ -33,8 +34,8 @@ const BodyContainer = styled.div`
     "Mahane   Bad " //30
     "PageTitle  PageTitle " //50
     " Tora Yahe  " //60
-    " Parasha Chida " //80
-    " Hizok  Hizok   " //90
+    " Parasha Hizok " //80
+    " Chida   Magic   " //90
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
@@ -54,7 +55,7 @@ const Haparasha = () => {
       <Yahe />
       <Mahane />
       <Bad />
-
+      <Magic />
       <Parasha />
       <Chida />
 
