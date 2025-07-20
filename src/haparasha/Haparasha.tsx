@@ -11,30 +11,33 @@ import Parasha from "./Parasha";
 import Pitaron from "./Pitaron";
 import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
 import l10n from "./l10n.json";
-import VortShir from "./VortShir";
+import Magic from "./Magic";
+import Vort from "./Vort";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1120px //20
-    260px //30
+    900px //20
+    480px //30
     120px //50
-    500px //60
-    220px //80
-    300px //90
-    210px //95
-    200px //100
+    250px //60
+    200px //60
+    180px //80
+    230px //90
+    230px //95
+    300px //100
     50px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
-    "VortShir VortShir  " //20
-    " Yahe  Bad " //30
+    "Vort Vort  " //20
+    " Hizok  Mahane  " //30
     "PageTitle  PageTitle " //50
-    " Tora Mahane  " //60
-    " Parasha Chida " //80
-    " Hizok  Hizok   " //90
+    " Tora Bad  " //60
+    " Chida Bad  " //70
+    " Parasha Bad " //80
+    " Yahe  Magic   " //90
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
@@ -50,13 +53,14 @@ const Haparasha = () => {
       <Title />
       <PageTitle />
       <Pitaron />
-      <VortShir height={960} width={1150} top={1} />
+      <Vort />
       <Yahe />
       <Mahane />
       <Bad />
 
       <Parasha />
       <Chida />
+      <Magic />
 
       <OtherLines gridArea="Hizok" num={3} />
       <OtherLines gridArea="Tora" num={5} />
