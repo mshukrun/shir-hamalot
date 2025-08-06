@@ -7,6 +7,7 @@ const OL = styled.div<{
   width?: number;
   height?: number;
   top?: number;
+  right?: number;
 }>`
   position: relative;
   font-weight: 400;
@@ -21,7 +22,7 @@ const OL = styled.div<{
   flex-wrap: wrap;
   height: ${({ height }) => height || 300}px;
   width: ${({ width }) => width || 200}px;
-  right: 320px;
+  right: ${({ right }) => right || 320}px;
   white-space: normal;
 `;
 
@@ -59,7 +60,7 @@ const TableDiv = styled.div<{
 
 const Tifzoret: React.FC<{
   table?: { left?: number; top?: number };
-  words?: { width?: number; height?: number; top?: number };
+  words?: { width?: number; height?: number; top?: number; right?: number };
 }> = ({ table, words }) => {
   const milim = l10n.tifzoret?.milim;
   const milaArr: string[] = milim.split("|");
@@ -69,7 +70,12 @@ const Tifzoret: React.FC<{
 
   return (
     <CommonFrame gridArea="Tifzoret" title={l10n.tifzoret.title} content={""}>
-      <OL width={words?.width} height={words?.height} top={words?.top}>
+      <OL
+        width={words?.width}
+        height={words?.height}
+        top={words?.top}
+        right={words?.right}
+      >
         {milaArr.map((mila) => {
           return <TextDiv>{mila}</TextDiv>;
         })}

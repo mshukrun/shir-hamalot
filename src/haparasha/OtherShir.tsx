@@ -1,27 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { faker } from "@faker-js/faker";
-import { MediumText, RegularPlusText, SubTitleText } from "../Common";
+import {
+  BasicBox,
+  MediumText,
+  RegularPlusText,
+  RegularText,
+  TitleDiv,
+} from "../Common";
 import l10n from "./l10n.json";
 import CommonFrame from "../CommonFrame";
 
 const TextDiv = styled.div`
   ${RegularPlusText}
   padding: 4px 10px 4px;
-`;
-
-const SubtitleDiv = styled.div`
-  ${SubTitleText}
-  text-align: center;
-  padding: 0 10px;
-`;
-
-const GoodShabesDiv = styled.div`
-  position: absolute;
-  ${MediumText}
-  bottom: 12px;
-  left: 35px;
-  text-decoration: underline;
 `;
 
 const OL = styled.div<{
@@ -45,24 +37,45 @@ const OL = styled.div<{
   white-space: normal;
 `;
 
-const VortShir: React.FC<{
+const CreditDiv = styled.div`
+  position: absolute;
+  ${RegularText}
+  bottom: 24px;
+  left: 0;
+  padding: 16px;
+`;
+
+const OtherShir: React.FC<{
+  num: number;
+  gridArea: string;
   width?: number;
   height?: number;
   top?: number;
-}> = ({ width = 1300, height = 1300, top = -10 }) => {
-  const texts = l10n.vort.text.split("|");
+}> = ({ num, gridArea, width = 1300, height = 500, top = -10 }) => {
+  // @ts-ignore
+  const title = l10n.other?.["title" + num];
+  // @ts-ignore
+  const subtitle = l10n.other?.["subtitle" + num];
+  // @ts-ignore
+  const texts: string[] = l10n.other?.["content" + num].split("|");
+  // @ts-ignore
+  const credit = l10n.other?.["credit" + num];
   return (
-    <CommonFrame gridArea="VortShir" title={l10n.vort.title} content="">
-      {l10n.vort.subtitle && <SubtitleDiv>{l10n.vort.subtitle}</SubtitleDiv>}
+    <CommonFrame
+      gridArea={gridArea}
+      title={title}
+      subtitle={subtitle}
+      content=""
+    >
       <OL width={width} height={height} top={top}>
         {texts.map((text) => (
           <TextDiv key={faker.datatype.uuid()}>{text}</TextDiv>
         ))}
       </OL>
 
-      <GoodShabesDiv>{l10n.vort.goodShabes}</GoodShabesDiv>
+      {credit && <CreditDiv>{credit}</CreditDiv>}
     </CommonFrame>
   );
 };
 
-export default VortShir;
+export default OtherShir;

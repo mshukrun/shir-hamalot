@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styled from "styled-components";
 import { faker } from "@faker-js/faker";
 import { RegularPlusText, RegularText } from "../Common";
@@ -26,7 +26,7 @@ const TableDiv = styled.div<{
   index: number;
 }>`
   position: absolute;
-  top: 60px;
+  top: ${({ index }) => index * 140 + 60}px;
   right: 300px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
@@ -38,35 +38,29 @@ const TableDiv = styled.div<{
   }
 `;
 
-const Magic = () => {
-  const lines = l10n.magic.content.split("|");
-  const amount = l10n.magic.amount;
-  const squares = new Array(amount).fill(1);
-  console.log({ lines, amount, squares });
-
-  const cells = new Array(lines.length / amount).fill(1);
+const MagicBox: React.FC<{ lines: string[]; index: number }> = ({
+  lines,
+  index,
+}) => {
+  const cells = new Array(3).fill(1);
 
   return (
-    <CommonFrame gridArea="Magic" title={l10n.magic.title} content="">
-      <Subtitle>{l10n.magic.note1}</Subtitle>
-
-      {squares.map((_, index) => (
-        <TableDiv index={index} key={faker.datatype.uuid()}>
-          <table cellSpacing={0} cellPadding={0}>
-            <tbody>
-              {cells.map(() => {
-                return (
-                  <tr key={faker.datatype.uuid()}>
-                    {cells.map(() => {
-                      return <td key={faker.datatype.uuid()}></td>;
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </TableDiv>
-      ))}
+    <>
+      <TableDiv index={index}>
+        <table cellSpacing={0} cellPadding={0}>
+          <tbody>
+            {cells.map(() => {
+              return (
+                <tr key={faker.datatype.uuid()}>
+                  {cells.map(() => {
+                    return <td key={faker.datatype.uuid()}></td>;
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </TableDiv>
 
       <OL>
         {lines.map((line) => (
@@ -75,6 +69,36 @@ const Magic = () => {
           </li>
         ))}
       </OL>
+    </>
+  );
+};
+
+const Magic = () => {
+  const lines = l10n.magic.content.split("|");
+  const amount = l10n.magic.amount;
+  const boxes = useMemo(() => {
+    const results: React.ReactNode[] = [];
+
+    for (let index = 0; index < amount; index++) {
+      results.push(
+        <>
+          <MagicBox
+            lines={lines.slice(index * 3, (index + 1) * 3)}
+            index={index}
+          />
+          <div style={{ height: "16px" }} />
+        </>
+      );
+    }
+
+    return results;
+  }, []);
+
+  return (
+    <CommonFrame gridArea="Magic" title={l10n.magic.title} content="">
+      <Subtitle>{l10n.magic.note1}</Subtitle>
+
+      {boxes}
     </CommonFrame>
   );
 };
