@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { faker } from "@faker-js/faker";
-import {
-  BasicBox,
-  MediumText,
-  RegularPlusText,
-  RegularText,
-  TitleDiv,
-} from "../Common";
+import { RegularPlusText, RegularText } from "../Common";
 import l10n from "./l10n.json";
 import CommonFrame from "../CommonFrame";
 
