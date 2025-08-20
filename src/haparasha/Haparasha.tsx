@@ -19,23 +19,23 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    920px //20
-    460px //30
+    1020px //20
+    350px //30
     120px //50
     280px //60
     220px //70
-    350px //90
+    460px //90
     220px //95
     250px //100
     50px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "VortShir VortShir  " //20
-    "  Hizok Mahane  " //30
+    "   Parasha  Tora  " //30
     "PageTitle  PageTitle " //50
     " Yahe  Bad  " //60
     " Chida Magic   " //70
-    "   Parasha  Tora  " //90
+    "  Hizok Mahane  " //30
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
@@ -51,7 +51,7 @@ const Haparasha = () => {
       <Title />
       <PageTitle />
       <Pitaron />
-      <VortShir height={790} width={1150} top={1} />
+      <VortShir height={930} width={1150} top={1} />
       <Yahe />
       <Mahane />
       <Bad />
