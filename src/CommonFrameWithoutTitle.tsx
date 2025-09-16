@@ -53,7 +53,7 @@ const CommonFrameWithoutTitle: React.FC<CommonFrameWithoutTitleProps> = ({
           </CenterTextDiv>
         ))}
       </InnerFrameBox>
-      {gniza && <Gniza l="-50px" t="100px" />}
+      {gniza && <Gniza l="-50px" t="60px" />}
     </FrameBox>
   );
 };
