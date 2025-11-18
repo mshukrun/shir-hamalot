@@ -1,16 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { BasicBox, RegularText, SmallText, TitleDiv } from "../Common";
+import { RegularText, SmallText } from "../Common";
 import l10n from "./l10n.json";
-
-const TashbetzBox = styled(BasicBox)`
-  grid-area: Tashbetz;
-  position: relative;
-`;
+import CommonFrame from "../CommonFrame";
 
 const OL = styled.ol`
   ${RegularText}
-  padding: 300px 60px 10px 0;
+  padding: 350px 60px 10px 0;
   list-style-type: none;
 `;
 
@@ -26,6 +22,7 @@ const UnderlineTextDiv = styled.div`
 
 const TdDiv = styled.div`
   -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -37,6 +34,7 @@ const TdDiv = styled.div`
 
 const BlackCell = styled.div`
   -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
   background-color: darkgray;
   width: 100%;
   height: 100%;
@@ -44,6 +42,7 @@ const BlackCell = styled.div`
 
 const WhiteCell = styled.div`
   -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
   background-color: white;
   width: 100%;
   height: 100%;
@@ -51,19 +50,22 @@ const WhiteCell = styled.div`
 
 const TableDiv = styled.div`
   -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
   position: absolute;
   ${RegularText}
-  top: 100px;
+  top: 50px;
   left: 100px;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
   tr {
     -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
   td {
     -webkit-print-color-adjust: exact;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    print-color-adjust: exact;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
     width: 60px;
     height: 60px;
   }
@@ -79,8 +81,7 @@ const Tashbetz = () => {
   const shapesArr: string[] = shapes.split("|");
 
   return (
-    <TashbetzBox dir="RTL">
-      <TitleDiv>{l10n.tashbetz.title}</TitleDiv>
+    <CommonFrame gridArea="Tashbetz" title={l10n.tashbetz.title} content="">
       <TableDiv>
         <table cellSpacing={0} cellPadding={0}>
           <tbody>
@@ -129,7 +130,7 @@ const Tashbetz = () => {
           );
         })}
       </OL>
-    </TashbetzBox>
+    </CommonFrame>
   );
 };
 
