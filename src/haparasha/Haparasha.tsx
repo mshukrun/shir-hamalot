@@ -11,28 +11,28 @@ import Parasha from "./Parasha";
 import Pitaron from "./Pitaron";
 import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
 import l10n from "./l10n.json";
-import VortShir from "./VortShir";
 import Magic from "./Magic";
+import Vort from "./Vort";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1020px //20
-    350px //30
+    1450px //20
     120px //50
-    280px //60
+    200px //60
+    220px //60
     220px //70
-    460px //90
-    220px //95
+    420px //90
+    190px //95
     250px //100
     50px; //110
-  grid-template-columns: 550px 550px;
+  grid-template-columns: 570px 570px;
   grid-template-areas: "Title Title" //10
-    "VortShir VortShir  " //20
-    "   Parasha  Tora  " //30
+    "Vort Vort  " //20
     "PageTitle  PageTitle " //50
+    " Parasha  Bad  " //55
     " Yahe  Bad  " //60
     " Chida Magic   " //70
     "  Hizok Mahane  " //30
@@ -51,7 +51,7 @@ const Haparasha = () => {
       <Title />
       <PageTitle />
       <Pitaron />
-      <VortShir height={930} width={1150} top={1} />
+      <Vort />
       <Yahe />
       <Mahane />
       <Bad />
@@ -59,7 +59,6 @@ const Haparasha = () => {
       <Parasha />
       <Chida />
       <OtherLines gridArea="Hizok" num={3} />
-      <OtherLines gridArea="Tora" num={5} />
       <CommonFrameWithoutTitle gridArea="Contact" content={l10n.contact} />
       <CommonFrameWithoutTitle
         gridArea="RIP"
