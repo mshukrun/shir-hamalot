@@ -7,7 +7,7 @@ import CommonFrame from "../CommonFrame";
 
 const OL = styled.ol`
   ${RegularText}
-  padding: 5px 70px 10px;
+  padding: 5px 20px 10px;
   list-style-type: none;
 `;
 
@@ -27,7 +27,7 @@ const TableDiv = styled.div<{
 }>`
   position: absolute;
   top: ${({ index }) => index * 140 + 60}px;
-  right: 300px;
+  right: 340px;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   td {
