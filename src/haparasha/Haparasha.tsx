@@ -11,32 +11,32 @@ import Parasha from "./Parasha";
 import Pitaron from "./Pitaron";
 import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
 import l10n from "./l10n.json";
-import VortShir from "./VortShir";
-import Magic from "./Magic";
+import Tifzoret from "./Tifzoret";
+import Vort from "./Vort";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1020px //20
-    350px //30
+    870px //20
+    500px //30
     120px //50
-    280px //60
-    220px //70
-    460px //90
-    220px //95
-    250px //100
+    500px //55
+    200px //60
+    170px //70
+    220px //90
+    200px //100
     50px; //110
   grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
-    "VortShir VortShir  " //20
-    "   Parasha  Tora  " //30
+    "Vort Vort  " //20
+    "   Hizok  Mahane  " //30
     "PageTitle  PageTitle " //50
-    " Yahe  Bad  " //60
-    " Chida Magic   " //70
-    "  Hizok Mahane  " //30
-    " FW  RIP   " //95
+    " Bad Tifzoret" //55
+    " Yahe  Chida  " //60
+    " Yahe Parasha   " //70
+    " FW  RIP   " //90
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
   font-family: "Bona Nova", serif;
@@ -51,15 +51,17 @@ const Haparasha = () => {
       <Title />
       <PageTitle />
       <Pitaron />
-      <VortShir height={930} width={1150} top={1} />
+      <Vort />
       <Yahe />
       <Mahane />
       <Bad />
-      <Magic />
       <Parasha />
       <Chida />
+      <Tifzoret
+        table={{ left: 110 }}
+        words={{ height: 360, width: 300, right: 390, top: 50 }}
+      />
       <OtherLines gridArea="Hizok" num={3} />
-      <OtherLines gridArea="Tora" num={5} />
       <CommonFrameWithoutTitle gridArea="Contact" content={l10n.contact} />
       <CommonFrameWithoutTitle
         gridArea="RIP"
