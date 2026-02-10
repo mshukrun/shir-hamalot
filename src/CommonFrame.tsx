@@ -14,7 +14,7 @@ const FrameBox = styled.div`
 
 const InnerFrameBox = styled(BasicBox)`
   position: relative;
-  padding-top: 10px;
+  padding-top: 40px;
 `;
 
 const TitleDiv = styled.div`
@@ -86,7 +86,7 @@ const CommonFrame: React.FC<CommonFrameProps> = ({
             <TextDiv key={`text_${index}`} isFirst={!subtitle && index === 0}>
               {text}
             </TextDiv>
-          )
+          ),
         )}
         {children}
       </InnerFrameBox>
