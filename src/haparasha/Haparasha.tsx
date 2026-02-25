@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Mahane from "./Mahane";
 import Title from "./Title";
 import Yahe from "./Yahe";
 import PageTitle from "./PageTitle";
@@ -20,25 +19,27 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    700px //20
-    500px //30
-    10px //40
+    870px //20
+    460px //30
+    40px //40
     120px //50
-    280px //60
+    320px //60
     220px //70
-    460px //90
+    240px //80
+    140px //90
     220px //95
-    250px //100
+    270px //100
     50px; //110
-  grid-template-columns: 500px 500px;
+  grid-template-columns: 550px 550px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "  Hizok Mahane  " //30
+    "  Hizok Megila  " //30
     "BlankSpace BlankSpace" //40
     "PageTitle  PageTitle " //50
     " Yahe  Tora   " //60
     " Chida Magic   " //70
-    "   Parasha  Bad  " //30
+    "   Parasha  Bad  " //80
+    "   Shiraim  Bad  " //90
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
@@ -56,13 +57,14 @@ const Haparasha = () => {
       <Pitaron />
       <Vort />
       <Yahe />
-      <Mahane />
       <Bad />
       <Magic />
       <Parasha />
       <Chida />
+      <OtherLines gridArea="Megila" num={1} />
       <OtherLines gridArea="Hizok" num={3} />
       <OtherLines gridArea="Tora" num={5} />
+      <OtherLines gridArea="Shiraim" num={6} />
       <CommonFrameWithoutTitle gridArea="Contact" content={l10n.contact} />
       <CommonFrameWithoutTitle
         gridArea="RIP"
