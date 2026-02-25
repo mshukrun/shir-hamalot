@@ -7,7 +7,7 @@ import CommonFrame from "../CommonFrame";
 
 const OL = styled.ol`
   ${RegularText}
-  padding: 5px 70px 10px;
+  padding: 5px 60px 10px;
   list-style-type: none;
 `;
 
@@ -19,7 +19,9 @@ const TextDiv = styled.div`
 const Subtitle = styled.div`
   ${RegularPlusText}
   font-weight: 700;
-  padding: 0 40px 10px;
+  position: absolute;
+  top: 20px;
+  right: 60px;
 `;
 
 const TableDiv = styled.div<{
@@ -87,7 +89,7 @@ const Magic = () => {
             index={index}
           />
           <div style={{ height: "16px" }} />
-        </>
+        </>,
       );
     }
 

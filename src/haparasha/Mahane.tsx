@@ -26,7 +26,9 @@ const BoldTextDiv = styled(TextDiv)`
 `;
 
 const Subtitle = styled(BoldTextDiv)`
-  padding: 10px 40px 10px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
 `;
 
 const CreditDiv = styled.div`
