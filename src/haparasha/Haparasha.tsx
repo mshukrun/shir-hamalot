@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Mahane from "./Mahane";
 import Title from "./Title";
 import Yahe from "./Yahe";
 import PageTitle from "./PageTitle";
@@ -20,28 +19,31 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    700px //20
-    500px //30
-    10px //40
+    890px //20
+    350px //30
+    50px //40
     120px //50
-    280px //60
+    240px //60
     220px //70
-    460px //90
-    220px //95
-    250px //100
-    50px; //110
-  grid-template-columns: 500px 500px;
-  grid-template-areas: "Title Title" //10
+    220px //80
+    300px //90
+    170px //95
+    255px; //100
+  grid-template-columns: 525px 525px;
+  grid-template-areas:
+    "Title Title" //10
     "Vort Vort  " //20
-    "  Hizok Mahane  " //30
-    "BlankSpace BlankSpace" //40
+    "   Tora  Bad  " //30
+    " Contact Contact " //110
+    /* "BlankSpace BlankSpace" //40 */
     "PageTitle  PageTitle " //50
-    " Yahe  Tora   " //60
-    " Chida Magic   " //70
-    "   Parasha  Bad  " //30
+    " Parasha Hizok    " //60
+    "  Parasha  Hizok  " //70
+    " Chida Magic   " //80
+    "   Yahe  Shiraim  " //90
     " FW  RIP   " //95
-    " Pitaron Pitaron   " // 100
-    " Contact Contact "; //110
+    " Pitaron Pitaron   "; // 100
+
   font-family: "Bona Nova", serif;
   row-gap: 8px;
   column-gap: 8px;
@@ -56,13 +58,13 @@ const Haparasha = () => {
       <Pitaron />
       <Vort />
       <Yahe />
-      <Mahane />
       <Bad />
       <Magic />
       <Parasha />
       <Chida />
       <OtherLines gridArea="Hizok" num={3} />
       <OtherLines gridArea="Tora" num={5} />
+      <OtherLines gridArea="Shiraim" num={6} />
       <CommonFrameWithoutTitle gridArea="Contact" content={l10n.contact} />
       <CommonFrameWithoutTitle
         gridArea="RIP"
@@ -75,7 +77,7 @@ const Haparasha = () => {
         fontSize={30}
         gniza={true}
       />
-      <BlankSpace gridArea="BlankSpace" size={10} />
+      <BlankSpace gridArea="BlankSpace" size={20} />
     </BodyContainer>
   );
 };
