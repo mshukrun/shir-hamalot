@@ -20,26 +20,28 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    700px //20
-    500px //30
-    10px //40
+    780px //20
+    300px //30
+    150px //35
     120px //50
-    280px //60
-    220px //70
-    460px //90
-    220px //95
-    250px //100
+    240px //70
+    250px //80
+    220px //90
+    200px //95
+    180px //96
+    200px //100
     50px; //110
   grid-template-columns: 500px 500px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    "  Hizok Mahane  " //30
-    "BlankSpace BlankSpace" //40
+    "  Hizok Parasha  " //30
+    "  Hizok Shirim  " //35
     "PageTitle  PageTitle " //50
-    " Yahe  Tora   " //60
-    " Chida Magic   " //70
-    "   Parasha  Bad  " //30
-    " FW  RIP   " //95
+    " Chida Hodaot    " //70
+    "   Tora  Hodaot  " //80
+    "   Magic  Hodaot  " //90
+    " FW  Hodaot   " //95
+    " RIP  Hodaot   " //96
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
   font-family: "Bona Nova", serif;
@@ -55,14 +57,13 @@ const Haparasha = () => {
       <PageTitle />
       <Pitaron />
       <Vort />
-      <Yahe />
-      <Mahane />
-      <Bad />
       <Magic />
       <Parasha />
       <Chida />
       <OtherLines gridArea="Hizok" num={3} />
+      <OtherLines gridArea="Hodaot" num={4} gap={5} />
       <OtherLines gridArea="Tora" num={5} />
+      <OtherLines gridArea="Shirim" num={6} />
       <CommonFrameWithoutTitle gridArea="Contact" content={l10n.contact} />
       <CommonFrameWithoutTitle
         gridArea="RIP"

@@ -41,10 +41,11 @@ const SubtitleDiv = styled.div`
 
 const TextDiv = styled.div<{
   isFirst: boolean;
+  gap?: number;
 }>`
   ${RegularPlusText}
-  padding: ${({ isFirst }) =>
-    isFirst ? "10px 30px 10px 170px" : "8px 30px 10px"};
+  padding: ${({ isFirst, gap }) =>
+    isFirst ? "10px 30px 10px 170px" : `8px 30px ${gap ?? 10}px`};
 `;
 
 const CenterTextDiv = styled.div`
@@ -62,6 +63,7 @@ interface CommonFrameProps {
   subtitle?: string;
   content: string;
   isCenter?: boolean;
+  gap?: number;
   gridArea: string;
   children: React.ReactNode;
 }
@@ -71,6 +73,7 @@ const CommonFrame: React.FC<CommonFrameProps> = ({
   subtitle,
   content,
   isCenter = false,
+  gap,
   gridArea,
   children,
 }) => {
@@ -83,7 +86,11 @@ const CommonFrame: React.FC<CommonFrameProps> = ({
           isCenter ? (
             <CenterTextDiv key={`text_${index}`}>{text}</CenterTextDiv>
           ) : (
-            <TextDiv key={`text_${index}`} isFirst={!subtitle && index === 0}>
+            <TextDiv
+              key={`text_${index}`}
+              isFirst={!subtitle && index === 0}
+              gap={gap}
+            >
               {text}
             </TextDiv>
           ),
