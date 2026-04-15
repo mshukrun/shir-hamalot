@@ -26,10 +26,17 @@ const CreditDiv = styled.div`
   text-decoration: underline;
 `;
 
-const Yahe = () => {
+const Yahe: React.FC<{
+  padding?: number;
+}> = ({ padding }) => {
   const texts = l10n.yahe.content.split("|");
   return (
-    <CommonFrame gridArea="Yahe" title={l10n.yahe.title} content="">
+    <CommonFrame
+      gridArea="Yahe"
+      title={l10n.yahe.title}
+      content=""
+      padding={padding}
+    >
       <OL>
         {texts.map((text, index) => (
           <li key={`text_${index}`}>

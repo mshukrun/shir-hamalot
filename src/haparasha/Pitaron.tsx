@@ -33,7 +33,12 @@ const RashiText = styled(TextDiv)`
 const Pitaron: React.FC = () => {
   const texts = l10n.pitaron.content.split("|");
   return (
-    <CommonFrame gridArea="Pitaron" title={l10n.pitaron.title} content="">
+    <CommonFrame
+      gridArea="Pitaron"
+      title={l10n.pitaron.title}
+      content=""
+      padding={1}
+    >
       {texts.map((text, index) => {
         const segemnts = text.split(":");
         return (
