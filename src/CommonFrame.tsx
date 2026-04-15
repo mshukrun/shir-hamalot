@@ -12,9 +12,11 @@ const FrameBox = styled.div`
   justify-content: flex-start;
 `;
 
-const InnerFrameBox = styled(BasicBox)`
+const InnerFrameBox = styled(BasicBox)<{
+  padding?: number;
+}>`
   position: relative;
-  padding-top: 40px;
+  padding-top: ${({ padding }) => padding ?? 40}px;
 `;
 
 const TitleDiv = styled.div`
@@ -64,6 +66,7 @@ interface CommonFrameProps {
   isCenter?: boolean;
   gridArea: string;
   children: React.ReactNode;
+  padding?: number;
 }
 
 const CommonFrame: React.FC<CommonFrameProps> = ({
@@ -73,11 +76,12 @@ const CommonFrame: React.FC<CommonFrameProps> = ({
   isCenter = false,
   gridArea,
   children,
+  padding,
 }) => {
   const texts = content.split("|");
   return (
     <FrameBox style={{ gridArea: gridArea }} dir="RTL">
-      <InnerFrameBox>
+      <InnerFrameBox padding={padding}>
         {subtitle && <SubtitleDiv>{subtitle}</SubtitleDiv>}
         {texts.map((text, index) =>
           isCenter ? (

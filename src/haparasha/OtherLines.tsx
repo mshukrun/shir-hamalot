@@ -15,7 +15,8 @@ const OtherLines: React.FC<{
   num: number;
   gridArea: string;
   isCenter?: boolean;
-}> = ({ num, gridArea, isCenter }) => {
+  padding?: number;
+}> = ({ num, gridArea, isCenter, padding }) => {
   // @ts-ignore
   const title = l10n.other?.["title" + num];
   // @ts-ignore
@@ -32,6 +33,7 @@ const OtherLines: React.FC<{
       subtitle={subtitle}
       content={content}
       isCenter={isCenter}
+      padding={padding}
     >
       {credit && <CreditDiv>{credit}</CreditDiv>}
     </CommonFrame>
