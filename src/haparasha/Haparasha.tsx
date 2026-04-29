@@ -10,35 +10,33 @@ import Pitaron from "./Pitaron";
 import CommonFrameWithoutTitle from "../CommonFrameWithoutTitle";
 import l10n from "./l10n.json";
 import Magic from "./Magic";
-import Vort from "./Vort";
 import BlankSpace from "../BlankSpace";
+import VortShir from "./VortShir";
 
 const BodyContainer = styled.div`
   display: grid;
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    930px //20
-    320px //30
+    1070px //20
+    200px //30
     10px //40
     120px //50
-    290px //60
-    190px //70
-    205px //80
-    150px //90
+    320px //60
+    320px //70
+    230px //80
     220px //95
-    220px //100
+    200px //100
     50px; //110
-  grid-template-columns: 500px 500px;
+  grid-template-columns: 500px 550px;
   grid-template-areas: "Title Title" //10
-    "Vort Vort  " //20
-    "  Hizok  Hizok " //30
+    "VortShir VortShir  " //20
+    "  Shiraim  Chida " //30
     "BlankSpace BlankSpace" //40
     "PageTitle  PageTitle " //50
-    " Yahe  Tora   " //60
-    " Chida Parasha   " //70
-    "   Magic  Parasha  " //80
-    "   Shiraim  Parasha  " //80
+    "  Hizok  Hizok " //60
+    " Yahe  Tora   " //70
+    " Magic Parasha   " //80
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
     " Contact Contact "; //110
@@ -54,7 +52,7 @@ const Haparasha = () => {
       <Title />
       <PageTitle />
       <Pitaron />
-      <Vort />
+      <VortShir width={500} height={1000} />
       <Yahe padding={10} />
       <Magic />
       <Parasha />
