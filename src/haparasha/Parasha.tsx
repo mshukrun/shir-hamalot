@@ -32,7 +32,12 @@ const LetterDiv = styled.div`
 const Parasha = () => {
   const questions = l10n.parasha.content.split("||");
   return (
-    <CommonFrame gridArea="Parasha" title={l10n.parasha.title} content={""}>
+    <CommonFrame
+      gridArea="Parasha"
+      title={l10n.parasha.title}
+      content={""}
+      padding={10}
+    >
       <OL>
         {questions.map((question) => {
           const parts = question.split("|");
