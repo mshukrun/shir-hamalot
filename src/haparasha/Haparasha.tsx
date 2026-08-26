@@ -19,11 +19,11 @@ const BodyContainer = styled.div`
   height: 2800px;
   width: 1200px;
   grid-template-rows: 220px //10
-    1020px //20
-    230px //30
-    1px //40
+    770px //20
+    450px //40
     120px //50
-    650px //60
+    280px //60
+    250px //60
     230px //80
     200px //95
     180px //100
@@ -31,10 +31,10 @@ const BodyContainer = styled.div`
   grid-template-columns: 500px 500px;
   grid-template-areas: "Title Title" //10
     "Vort Vort  " //20
-    " Magic    Parasha " //30
     "BlankSpace BlankSpace" //40
     "PageTitle  PageTitle " //50
     " Hizok   Sahir  " //60
+    " Hizok   Magic  " //60
     "   Yahe  Chida  " //80
     " FW  RIP   " //95
     " Pitaron Pitaron   " // 100
@@ -54,7 +54,6 @@ const Haparasha = () => {
       <Vort />
       <Yahe padding={10} />
       <Magic />
-      <Parasha />
       <Chida />
       <OtherLines gridArea="Sahir" num={1} padding={10} />
       <OtherLines gridArea="Hizok" num={3} padding={10} />
